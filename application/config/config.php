@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //$config['base_url'] = 'http://localhost:89/education/';
-$config['base_url'] = 'http://localhost/education/';
+$config['base_url'] = 'http://localhost/lumau_elearning/';
 $config['theme_admin'] = "theme/admin";
 $config['theme_frontend'] = "theme/frontend";
 
