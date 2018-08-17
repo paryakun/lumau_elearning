@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Notice
-            <small>Edit Notice</small>
+            Pengumuman
+            <small>Ubah Pengumuman</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Notice</a></li>
-            <li class="active">Edit Notice</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Pengumuman</a></li>
+            <li class="active">Ubah Pengumuman</li>
           </ol>
         </section>
 
@@ -26,7 +26,7 @@
         <section class="content">
             <div class="row">
               <div class="col-md-12">
-                <a href="<?php echo site_url("noticeboard/manage_noticeboard"); ?>" class="btn btn-primary pull-right">List</a>
+                <a href="<?php echo site_url("noticeboard/manage_noticeboard"); ?>" class="btn btn-primary pull-right">Daftar</a>
                 </div>
                 <div class="col-md-12">
                 <div class="col-md-3"></div>
@@ -49,11 +49,11 @@
                                     <div class="row">
                                     
                                     <div class="col-md-12">
-                                        <label for="notice_description">Notice Description <span class="red">*</span></label>
-                                       <textarea rows="5" id="notice_description" name="notice_description" class="form-control" placeholder="Notice Detail"><?php echo $noticelist->notice_description; ?></textarea>
+                                        <label for="notice_description">Deskripsi Pengumuman <span class="red">*</span></label>
+                                       <textarea rows="5" id="notice_description" name="notice_description" class="form-control" placeholder="Rincian Pengumuman"><?php echo $noticelist->notice_description; ?></textarea>
                                     </div>
                                     <div class="col-md-12">
-                                        <label for="notice_type">Select Notice Type <span class="red">*</span></label>
+                                        <label for="notice_type">Pilih Tipe Pengumuman <span class="red">*</span></label>
                                         <select name="notice_type" class="form-control select2"> 
                                             <?php foreach($this->config->item("notice_type") as $notice){ ?>
                                             <option value="<?php echo $notice; ?>" <?php if($noticelist->notice_type==$notice){echo "selected";} ?>><?php echo $notice; ?></option>
@@ -68,7 +68,7 @@
                               </div><!-- /.box-body -->
             
                               <div class="box-footer">
-                                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
                               </div>
                             </form>
                         </div>

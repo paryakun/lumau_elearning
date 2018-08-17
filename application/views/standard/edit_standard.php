@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Standard
-            <small>Edit Standard</small>
+            Standar
+            <small>Ubah Standar</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Standard</a></li>
-            <li class="active">Edit Standard</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Standar</a></li>
+            <li class="active">Ubah Standar</li>
           </ol>
         </section>
 
@@ -26,7 +26,7 @@
         <section class="content">
             <div class="row">
               <div class="col-md-12">
-                <a href="<?php echo site_url("standard/manage_standard"); ?>" class="btn btn-primary pull-right">List</a>
+                <a href="<?php echo site_url("standard/manage_standard"); ?>" class="btn btn-primary pull-right">Daftar</a>
                 </div>
                 <div class="col-md-12">
                 <div class="col-md-3"></div>
@@ -48,7 +48,7 @@
                                 <div class="form-group">
                                     <div class="row">
                                     <div class="col-md-6">
-                                        <label for="user_fullname">Standard Name <span class="red">*</span></label>
+                                        <label for="user_fullname">Nama Standar <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="standard_title" name="standard_title" placeholder="Ex. 1, 2, L.K.G, etc" value="<?php echo $standard->standard_title; ?>" />
                                     </div>
                                    
@@ -59,7 +59,7 @@
                               </div><!-- /.box-body -->
             
                               <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Update</button>
+                                <button type="submit" class="btn btn-primary">Perbarui</button>
                               </div>
                             </form>
                         </div>

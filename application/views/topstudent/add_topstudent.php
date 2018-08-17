@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Add Top 10 Student
-            <small>Manage Top 10 Student</small>
+            Tambah Top 10 Siswa / Peserta
+            <small>Kelola Top 10</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Top 10 Student</a></li>
-            <li class="active">Add Top 10 Student</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Top 10 </a></li>
+            <li class="active">Tambah Top 10</li>
           </ol>
         </section>
 
@@ -37,9 +37,9 @@
                 <form method="post">
                 
                 <div class="col-md-3">
-                <label for="standard">Select Standard<span class="red">*</span></label>
+                <label for="standard">Pilih Standar<span class="red">*</span></label>
                  <select class="form-control select2" name="standard" id="standard" style="width: 100%;">
-                                           <option value="">Select Standard</option>
+                                           <option value="">Pilih Standar</option>
                                             <?php foreach($school_standard as $standard){
                                                 ?>
                                                 <option value="<?php echo $standard->standard_id; ?>" <?php  if(isset($_POST["standard"]) && $_POST["standard"]==$standard->standard_id){ echo "selected"; } ?>><?php echo $standard->standard_title; ?></option>
@@ -52,9 +52,9 @@
                                         
                   <div class="col-md-2">
                   <div class="form-group">
-                                  <label for="start_date">View Student </label>
+                                  <label for="start_date">Lihat Siswa / Peserta </label>
                                     <div class="input-group">
-                                  <input type="submit" name="studentlist" class="btn btn-primary" value="View Student"/>   
+                                  <input type="submit" name="studentlist" class="btn btn-primary" value="Lihat"/>   
                                   
                                   </div>
                                 </div>
@@ -79,16 +79,16 @@
                             <form role="form" action="" method="post" enctype="multipart/form-data">
                               <div class="box-body">
                               
-                               <strong>Manualy Add Student Rank (Please Enter Rank in 1 to 10 Number Only)</strong>
+                               <strong>Tambah Peringkat Manual (Masukan Angka 1 hingga 10)</strong>
                      <input type="hidden" name="standard" value="<?php echo ($this->input->post('standard')!="")? $this->input->post('standard') : "";  ?>" />           
                   <table id="example2" class="table table-bordered table-hover display">
                     <thead>
                       <tr>
                       <th>ID</th>
-                        <th>Standard Name</th>
-                        <th>Student Name</th>
-                         <th>Student Roll No</th>
-                        <th>Student Rank</th>
+                        <th>Standar</th>
+                        <th>Nama</th>
+                        <!-- <th>Student Roll No</th> -->
+                        <th>Peringkat</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -112,7 +112,7 @@
                         <input type="hidden" name="student_id[]" value="<?php echo $students->student_id; ?>"/>
                         <?php echo $students->standard_title; ?></td>
                        <td><?php echo $students->student_name; ?></td>
-                       <td><?php echo $students->student_roll_no; ?></td>
+                      <!-- <td><?php //echo $students->student_roll_no; ?></td> -->
                         <td><input class="" type="number" name="note<?php echo $students->student_id ?>" placeholder="Student Rank" value="<?php if(isset($array['student_rank'])) echo $array['student_rank']; ?>"/></td>
                              
                     </tr>
@@ -129,7 +129,7 @@
                               </div><!-- /.box-body -->
             
                              <div class="box-footer">
-                                <button type="submit" name="savetop" class="btn btn-primary">Save Data</button>
+                                <button type="submit" name="savetop" class="btn btn-primary">Simpan Data</button>
                               </div>
                             </form>
                         </div>

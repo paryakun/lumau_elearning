@@ -26,11 +26,17 @@ class Student extends CI_Controller {
                 $this->form_validation->set_rules('student_name', 'Student Name', 'trim|required');
                 $this->form_validation->set_rules('student_birthdate', 'Student Birthdate', 'trim|required');
                 $this->form_validation->set_rules('student_username', 'Student Login User Name', 'trim|required|is_unique[student_detail.student_user_name]');
-                $this->form_validation->set_rules('student_roll_no', 'Student Roll No', 'trim|required');
+                //$this->form_validation->set_rules('student_roll_no', 'Student Roll No', 'trim|required');
                 $this->form_validation->set_rules('student_password', 'Student Password', 'trim|required');
                 $this->form_validation->set_rules('student_address', 'Student Address', 'trim|required');
                 $this->form_validation->set_rules('student_city', 'Student City', 'trim|required');
                 $this->form_validation->set_rules('student_phone', 'Student Phone', 'trim|required');
+                $this->form_validation->set_rules('pangkat', 'Pangkat', 'trim|required');
+                $this->form_validation->set_rules('korp', 'Korp', 'trim|required');
+                $this->form_validation->set_rules('nrp', 'NRP', 'trim|required');
+                $this->form_validation->set_rules('kesatuan', 'Kesatuan', 'trim|required');
+                $this->form_validation->set_rules('jabatan', 'Jabatan', 'trim|required');
+                $this->form_validation->set_rules('matra', 'Matra', 'trim|required');
                
                 if ($this->form_validation->run() == FALSE) 
         		{
@@ -79,7 +85,7 @@ class Student extends CI_Controller {
                             "student_name"=>$this->input->post("student_name"),
                             "student_birthdate"=>$this->input->post("student_birthdate"),
                             "student_unique_no"=>$this->input->post("student_unique_no"),
-                            "student_roll_no"=>$this->input->post("student_roll_no"),
+                           // "student_roll_no"=>$this->input->post("student_roll_no"),
                             "student_user_name"=>$this->input->post("student_username"),
                             "student_password"=>md5($this->input->post("student_password")),
                             "student_orgpassword"=>$this->input->post("student_password"),
@@ -88,12 +94,18 @@ class Student extends CI_Controller {
                             "student_city"=>$this->input->post("student_city"),
                             "student_phone"=>$this->input->post("student_phone"),
                             "student_parent_phone"=>$this->input->post("student_parent_phone"),
-                            "student_enr_no"=>$this->input->post("student_enr_no"),
+                            //"student_enr_no"=>$this->input->post("student_enr_no"),
                             "student_email"=>$this->input->post("student_email"),
-                            "student_branch"=>$this->input->post("student_branch"),
-                            "student_semester"=>$this->input->post("student_semester"),
-                            "student_division"=>$this->input->post("student_division"),
-                            "student_batch"=>$this->input->post("student_batch"),
+                            //"student_branch"=>$this->input->post("student_branch"),
+                            //"student_semester"=>$this->input->post("student_semester"),
+                            //"student_division"=>$this->input->post("student_division"),
+                            //"student_batch"=>$this->input->post("student_batch"),
+                            "pangkat"=>$this->input->post("pangkat"),
+                            "korp"=>$this->input->post("korp"),
+                            "nrp"=>$this->input->post("nrp"),
+                            "kesatuan"=>$this->input->post("kesatuan"),
+                            "jabatan"=>$this->input->post("jabatan"),
+                            "matra"=>$this->input->post("matra"),
                             "student_photo"=>$file_name,
                             "school_id"=>_get_current_user_id($this)
                             ));
@@ -119,10 +131,16 @@ class Student extends CI_Controller {
                 
                 $this->form_validation->set_rules('student_name', 'Student Name', 'trim|required');
                 $this->form_validation->set_rules('student_birthdate', 'Student Birthdate', 'trim|required');
-                $this->form_validation->set_rules('student_roll_no', 'Student Roll No', 'trim|required');
+               // $this->form_validation->set_rules('student_roll_no', 'Student Roll No', 'trim|required');
                 $this->form_validation->set_rules('student_address', 'Student Address', 'trim|required');
                 $this->form_validation->set_rules('student_city', 'Student City', 'trim|required');
                 $this->form_validation->set_rules('student_phone', 'Student Phone', 'trim|required');
+                                $this->form_validation->set_rules('pangkat', 'Pangkat', 'trim|required');
+                $this->form_validation->set_rules('korp', 'Korp', 'trim|required');
+                $this->form_validation->set_rules('nrp', 'NRP', 'trim|required');
+                $this->form_validation->set_rules('kesatuan', 'Kesatuan', 'trim|required');
+                $this->form_validation->set_rules('jabatan', 'Jabatan', 'trim|required');
+                $this->form_validation->set_rules('matra', 'Matra', 'trim|required');
               
                 if ($this->form_validation->run() == FALSE) 
         		{
@@ -141,18 +159,24 @@ class Student extends CI_Controller {
                         $update_array = array(
                             "student_name"=>$this->input->post("student_name"),
                             "student_birthdate"=>$this->input->post("student_birthdate"),
-                            "student_roll_no"=>$this->input->post("student_roll_no"),
+                           // "student_roll_no"=>$this->input->post("student_roll_no"),
                             "student_standard"=>$this->input->post("student_standard"),
                             "student_address"=>$this->input->post("student_address"),
                             "student_city"=>$this->input->post("student_city"),
                             "student_phone"=>$this->input->post("student_phone"),
                             "student_parent_phone"=>$this->input->post("student_parent_phone"),
-                            "student_enr_no"=>$this->input->post("student_enr_no"),
+                            //"student_enr_no"=>$this->input->post("student_enr_no"),
                             "student_email"=>$this->input->post("student_email"),
-                            "student_branch"=>$this->input->post("student_branch"),
-                            "student_semester"=>$this->input->post("student_semester"),
-                            "student_division"=>$this->input->post("student_division"),
-                            "student_batch"=>$this->input->post("student_batch")
+                           // "student_branch"=>$this->input->post("student_branch"),
+                           // "student_semester"=>$this->input->post("student_semester"),
+                           // "student_division"=>$this->input->post("student_division"),
+                           // "student_batch"=>$this->input->post("student_batch"),
+                            "pangkat"=>$this->input->post("pangkat"),
+                            "korp"=>$this->input->post("korp"),
+                            "nrp"=>$this->input->post("nrp"),
+                            "kesatuan"=>$this->input->post("kesatuan"),
+                            "jabatan"=>$this->input->post("jabatan"),
+                            "matra"=>$this->input->post("matra")
                             
                             
                             );
@@ -193,7 +217,7 @@ class Student extends CI_Controller {
             $studenttid = $this->student_model->get_school_student_by_id($student_id);
             $data["student"] = $studenttid;
             $this->load->model("standard_model");
-           $data["school_standard"] = $this->standard_model->get_school_standard();
+            $data["school_standard"] = $this->standard_model->get_school_standard();
             $this->load->view("student/edit_student",$data);
         }
     }

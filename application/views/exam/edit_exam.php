@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Exam
-            <small>Edit Exam</small>
+            Ujian
+            <small>Ubah Ujian</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Exam</a></li>
-            <li class="active">Edit Exam</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Ujian</a></li>
+            <li class="active">Ubah Ujian</li>
           </ol>
         </section>
 
@@ -26,7 +26,7 @@
         <section class="content">
             <div class="row">
               <div class="col-md-12">
-                <a href="<?php echo site_url("exam/manage_exam"); ?>" class="btn btn-primary pull-right">List</a>
+                <a href="<?php echo site_url("exam/manage_exam"); ?>" class="btn btn-primary pull-right">Daftar</a>
                 </div>
                 <div class="col-md-12">
                 <div class="col-md-3"></div>
@@ -49,26 +49,26 @@
                                     <div class="row">
                                    
                                       <div class="col-md-12">
-                                        <label for="exam_title">Exam Title <span class="red">*</span></label>
+                                        <label for="exam_title">Judul Ujian <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="exam_title" name="exam_title" placeholder="Ex. Monthaly Test, Gujarati Test, etc" value="<?php echo $exam->exam_title; ?>"/>
                                     </div>
                                     <div class="col-md-12">
-                                        <label for="exam_description">Exam Note or Description <span class="red">*</span></label>
+                                        <label for="exam_description">Deskripsi / Catatan <span class="red">*</span></label>
                                        <textarea rows="5" id="exam_description" name="exam_description" class="form-control" placeholder="Exam Detail"><?php echo $exam->exam_title; ?></textarea>
                                     </div>
                                     <div class="col-md-12">
                                    <div class="form-group">
-                                  <label for="start_date">Exam Date <span class="red">*</span></label>
+                                  <label for="start_date">Tanggal Ujian <span class="red">*</span></label>
                                     <div class="input-group">
                                       <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                       </div>
-                                  <input type="text" class="form-control" id="start_date" name="start_date" placeholder="Show Date" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask value="<?php echo $exam->exam_date; ?>">
+                                  <input type="text" class="form-control" id="start_date" name="start_date" placeholder="Tanggal Ujian" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask value="<?php echo $exam->exam_date; ?>">
                                   </div>
                                 </div>
                                    </div> 
                                     <div class="col-md-12">
-                                        <label for="standard">Standard <span class="red">*</span></label>
+                                        <label for="standard">Standar <span class="red">*</span></label>
                                         <select class="form-control select2" name="standard" id="standard" style="width: 100%;">
                                             <?php foreach($school_standard as $standard){
                                                 ?>
@@ -85,7 +85,7 @@
                               </div><!-- /.box-body -->
             
                               <div class="box-footer">
-                                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
                               </div>
                             </form>
                         </div>

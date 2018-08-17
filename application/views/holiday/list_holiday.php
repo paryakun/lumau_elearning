@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Holiday 
-            <small>Manage Holiday</small>
+            Hari Libur 
+            <small>Kelola Hari Libur</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Holiday</a></li>
-            <li class="active">List Holiday</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Hari Libur</a></li>
+            <li class="active">Daftar Hari Libur</li>
           </ol>
         </section>
 
@@ -26,7 +26,7 @@
         <section class="content">
          <div class="row">
                 <div class="col-md-12">
-                <a href="<?php echo site_url("holiday/manage_holiday"); ?>" class="btn btn-primary pull-right">Add</a>
+                <a href="<?php echo site_url("holiday/manage_holiday"); ?>" class="btn btn-primary pull-right">Tambah</a>
                 </div>
                 <div class="col-md-12">
             <div class="box">
@@ -35,10 +35,10 @@
                     <thead>
                       <tr>
                         <th>ID</th>
-                        <th>Holiday Title</th>
+                        <th>Judul Hari Libur</th>
                         <th>Date</th>
                         
-                        <th width="80">Action</th>
+                        <th width="80">Aksi</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -50,7 +50,7 @@
                         <td><?php echo $holidays->holiday_date; ?></td>
                     
                         <td>
-                            <a href="<?php echo site_url("holiday/delete_holiday/".$holidays->holiday_id); ?>" onclick="return confirm('are you sure to delete?')" class="btn btn-danger"><i class="fa fa-remove"></i></a>
+                            <a href="<?php echo site_url("holiday/delete_holiday/".$holidays->holiday_id); ?>" onclick="return confirm('Yakinkah ingin menghapus?')" class="btn btn-danger"><i class="fa fa-remove"></i></a>
                         </td>
                     </tr>
                     <?php

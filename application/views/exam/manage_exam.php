@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            School Exam
-            <small>Manage Exam</small>
+            Ujian
+            <small>Kelola Ujian</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Exam</a></li>
-            <li class="active">Manage Exam</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Ujian</a></li>
+            <li class="active">Kelola Ujian</li>
           </ol>
         </section>
 
@@ -31,7 +31,7 @@
                 <div class="col-md-4">
                     <div class="box">
                         <div class="box-header">
-                           <p><strong>Add Exam (Ex. Monthaly Test, Gujarati Test, etc)</strong></p>
+                           <p><strong>Tambah Ujian </strong></p>
                         </div>
                         <div class="box-body">
                         
@@ -47,26 +47,26 @@
                                     <div class="row">
                                    
                                       <div class="col-md-12">
-                                        <label for="exam_title">Exam Title <span class="red">*</span></label>
-                                        <input type="text" class="form-control" id="exam_title" name="exam_title" placeholder="Ex. Monthaly Test, Gujarati Test, etc" />
+                                        <label for="exam_title">Judul Ujian<span class="red">*</span></label>
+                                        <input type="text" class="form-control" id="exam_title" name="exam_title" placeholder="" />
                                     </div>
                                     <div class="col-md-12">
-                                        <label for="exam_description">Exam Note or Description <span class="red">*</span></label>
-                                       <textarea rows="5" id="exam_description" name="exam_description" class="form-control" placeholder="Exam Detail"></textarea>
+                                        <label for="exam_description">Deskripsi / Catatan<span class="red">*</span></label>
+                                       <textarea rows="5" id="exam_description" name="exam_description" class="form-control" placeholder="Rincian Ujian"></textarea>
                                     </div>
                                     <div class="col-md-12">
                                    <div class="form-group">
-                                  <label for="start_date">Exam Date <span class="red">*</span></label>
+                                  <label for="start_date">Tanggal Ujian <span class="red">*</span></label>
                                     <div class="input-group">
                                       <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                       </div>
-                                  <input type="text" class="form-control" id="start_date" name="start_date" placeholder="Show Date" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask>
+                                  <input type="text" class="form-control" id="start_date" name="start_date" placeholder="Tanggal Ujian" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask>
                                   </div>
                                 </div>
                                    </div> 
                                     <div class="col-md-12">
-                                        <label for="standard">Standard <span class="red">*</span></label>
+                                        <label for="standard">Standar <span class="red">*</span></label>
                                         <select class="form-control select2" name="standard" id="standard" style="width: 100%;">
                                             <?php foreach($school_standard as $standard){
                                                 ?>
@@ -83,7 +83,7 @@
                               </div><!-- /.box-body -->
             
                               <div class="box-footer">
-                                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
                               </div>
                             </form>
                         </div>
@@ -96,12 +96,12 @@
                     <thead>
                       <tr>
                         <th>ID</th>
-                        <th>Exam Title</th>
-                        <th>Exam Description</th>
-                        <th>Exam Date</th>
-                        <th>Standard</th>
-                        <th>Result</th>
-                        <th width="80">Action</th>
+                        <th>Judul</th>
+                        <th>Deskripsi</th>
+                        <th>Tanggal Ujian</th>
+                        <th>Standar</th>
+                        <th>Hasil</th>
+                        <th width="80">Aksi</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -113,10 +113,10 @@
                         <td><?php echo substr($examlist->exam_note, 0,300);?></td>
                         <td><?php echo $examlist->exam_date; ?></td>
                         <td><?php echo $examlist->standard_title; ?></td>
-                        <td><a href="<?php echo site_url("examresult/manage_result/".$examlist->exam_id); ?>" class="btn btn-primary"><i class="fa fa-plus"></i> Add Result</a></td>
+                        <td><a href="<?php echo site_url("examresult/manage_result/".$examlist->exam_id); ?>" class="btn btn-primary"><i class="fa fa-plus"></i> Hasil Penilaian</a></td>
                         <td>
                             <a href="<?php echo site_url("exam/edit_exam/".$examlist->exam_id); ?>" class="btn btn-success"><i class="fa fa-edit"></i></a>
-                            <a href="<?php echo site_url("exam/delete_exam/".$examlist->exam_id); ?>" onclick="return confirm('are you sure to delete?')" class="btn btn-danger"><i class="fa fa-remove"></i></a>
+                            <a href="<?php echo site_url("exam/delete_exam/".$examlist->exam_id); ?>" onclick="return confirm('Yakin akan menghapus?')" class="btn btn-danger"><i class="fa fa-remove"></i></a>
                         </td>
                     </tr>
                     <?php

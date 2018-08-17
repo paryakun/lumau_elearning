@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Teacher 
-            <small>Manage Teacher</small>
+            Instruktur
+            <small>Kelola</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Teacher</a></li>
-            <li class="active">List Teacher</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Instruktur</a></li>
+            <li class="active">Daftar Instruktur</li>
           </ol>
         </section>
 
@@ -26,7 +26,7 @@
         <section class="content">
          <div class="row">
          <div class="col-md-12">
-          <a href="<?php echo site_url("student/add_student"); ?>" class="btn btn-primary pull-right">Add</a>
+          <a href="<?php echo site_url("teacher/add_teacher"); ?>" class="btn btn-primary pull-right">Tambah</a>
                      
          </div>
          
@@ -39,13 +39,13 @@
                     <thead>
                       <tr>
                        <th>ID</th> 
-                        <th> Name</th>
-                         <th> Birthdate</th>
-                        <th> Phone</th>
-                        <th> Address</th>
-                        <th> Education</th>
-                        <th> Detail</th>
-                        <th width="80">Action</th>
+                        <th> Nama</th>
+                         <th>Tanggal Lahir</th>
+                        <th> Telepon </th>
+                        <th> Alamat</th>
+                        <th> Pendidikan</th>
+                        <th> Detail </th>
+                        <th width="80">Aksi</th>
                       </tr>
                     </thead>
                     <tbody>

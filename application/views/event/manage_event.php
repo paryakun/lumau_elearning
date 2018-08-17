@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            School Event
-            <small>Manage Event</small>
+            Materi Kuliah / Pelatihan
+            <small>Kelola</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Event</a></li>
-            <li class="active">Manage Event</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Materi Kuliah / Pelatihan </a></li>
+            <li class="active">Kelola </li>
           </ol>
         </section>
 
@@ -31,7 +31,7 @@
                 <div class="col-md-4">
                     <div class="box">
                         <div class="box-header">
-                           <p><strong>Add Event (Ex. Annual Function, Seminar, etc)</strong></p>
+                           <p><strong>Tambah Mata Kuliah / Pelatihan </strong></p>
                         </div>
                         <div class="box-body">
                         
@@ -47,46 +47,61 @@
                                     <div class="row">
                                    
                                       <div class="col-md-12">
-                                        <label for="event_title">Event Title <span class="red">*</span></label>
-                                        <input type="text" class="form-control" id="event_title" name="event_title" placeholder="Ex. Annual Function, Sport Day, Seminar, etc" />
+                                        <label for="event_title">Judul Mata Kuliah / Pelatihan <span class="red">*</span></label>
+                                        <input type="text" class="form-control" id="event_title" name="event_title" placeholder="" />
                                     </div>
                                     <div class="col-md-12">
-                                        <label for="event_description">Event Description <span class="red">*</span></label>
-                                       <textarea rows="5" id="event_description" name="event_description" class="form-control" placeholder="Event Detail"></textarea>
+                                        <label for="event_description">Deskripsi Mata Kuliah / Pelatihan <span class="red">*</span></label>
+                                       <textarea rows="5" id="event_description" name="event_description" class="form-control" placeholder=""></textarea>
                                     </div>
                                     <div class="col-md-12">
                                    <div class="form-group">
-                                  <label for="start_date">Start Date <span class="red">*</span></label>
+                                  <label for="start_date">Tanggal Dimulai<span class="red">*</span></label>
                                     <div class="input-group">
                                       <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                       </div>
-                                  <input type="text" class="form-control" id="start_date" name="start_date" placeholder="Show Date" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask>
+                                  <input type="text" class="form-control" id="start_date" name="start_date" placeholder="" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask>
                                   </div>
                                 </div>
                                    </div> 
-                                    <div class="col-md-12">
-                                   <div class="form-group">
-                                  <label for="end_date">End Date <span class="red">*</span></label>
-                                    <div class="input-group">
-                                      <div class="input-group-addon">
-                                        <i class="fa fa-calendar"></i>
-                                      </div>
-                                  <input type="text" class="form-control" id="end_date" name="end_date" placeholder="Show Date" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask >
-                                  </div>
-                                </div>
+                                       <div class="col-md-12">
+                                          <div class="form-group">
+                                            <label for="end_date">Tanggal Berakhir <span class="red">*</span></label>
+                                              <div class="input-group">
+                                                <div class="input-group-addon">
+                                                  <i class="fa fa-calendar"></i>
+                                                </div>
+                                            <input type="text" class="form-control" id="end_date" name="end_date" placeholder="Show Date" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask >
+                                            </div>
+                                          </div>
+                                       </div>
+                                       <div class="col-md-12">
+                                            <label for="event_photo">Photo Materi Kuliah / Pelatihan </label>
+                                            <input type="file" class="form-control" id="event_photo" name="event_photo" />
+                                       </div>
+                                       <div class="col-md-12">
+                                            <label for="file_attachment">File Materi Kuliah / Pelatihan </label>
+                                            <input type="file" class="form-control" id="file_attachment" name="file_attachment" />
+                                       </div>
+                                       <div class="col-md-12">
+                                        <label for="teacher_id">Instruktur<span class="red">*</span></label>
+                                        <select class="form-control select2" name="teacher_id" id="teacher_id" style="width: 100%;">
+                                            <?php foreach($teacher_detail as $teacher){
+                                                ?>
+                                                <option value="<?php echo $teacher->teacher_id; ?>" <?php if($teacher->teacher_id == $teacher->teacher_name){echo "selected";} ?>><?php echo $teacher->teacher_name; ?></option>
+                                                <?php
+                                            } ?>
+                                        </select>
+                                        <p>Daftar Instruktur tidak ada ?  : <a href="<?php echo site_url("teacher/add_teacher"); ?>"> Tambah Instruktur</a></p>
+                                        </div>
                                    </div>
-                                    <div class="col-md-12">
-                                        <label for="event_photo">Event Photo </label>
-                                        <input type="file" class="form-control" id="event_photo" name="event_photo" />
-                                    </div>
-                                    </div>
                                 </div>
                              
                               </div><!-- /.box-body -->
             
                               <div class="box-footer">
-                                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
                               </div>
                             </form>
                         </div>
@@ -100,11 +115,11 @@
                     <thead>
                       <tr>
                         <th>ID</th>
-                        <th>Event Title</th>
-                        <th>Event Description</th>
-                        <th>Start Date</th>
-                        <th>End Date</th>
-                        <th width="80">Action</th>
+                        <th>Judul </th>
+                        <th>Deskripsi</th>
+                        <th>Tanggal Dimulai</th>
+                        <th>Tanggal Berakhir</th>
+                        <th width="80">Aksi</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -114,17 +129,31 @@
                         <td><?php echo $eventdlist->event_id; ?></td>
                         <td><?php echo substr($eventdlist->event_title, 0,100);?></td>
                         <td>
-                        <?php echo substr($eventdlist->event_description, 0,200)."<br />";?> 
-                         <?php 
-                          if($eventdlist->event_image!=""){
-                        $img = $this->config->item('base_url')."uploads/eventphoto/".$eventdlist->event_image; 
-                        ?><img src="<?php echo $img; ?>" style="height: 100px; width: 100px;"/></td>
-                         <?php } ?>
+                            <?php echo substr($eventdlist->event_description, 0,200)."<br />";?> 
+                               <?php 
+                          
+                                  if($eventdlist->event_image!=""){
+                                    $img = $this->config->item('base_url')."uploads/eventphoto/".$eventdlist->event_image;?>
+
+                                     <img src="<?php echo $img; ?>" style="height: 100px; width: 100px;"/>
+
+                            <?php } ?>
+
+                            <?php 
+                          
+                                  if($eventdlist->file_attachment!=""){
+                                    $file = $this->config->item('base_url')."uploads/eventphoto/".$eventdlist->file_attachment;?>
+                                    <a href="<?php echo $file; ?>" download> Unduh Materi</a>
+
+                            <?php } ?>
+
+                        </td>
+                         
                         <td><?php echo $eventdlist->event_start; ?></td>
                         <td><?php echo $eventdlist->event_end; ?></td>
                         <td>
                             <a href="<?php echo site_url("event/edit_event/".$eventdlist->event_id); ?>" class="btn btn-success"><i class="fa fa-edit"></i></a>
-                            <a href="<?php echo site_url("event/delete_event/".$eventdlist->event_id); ?>" onclick="return confirm('are you sure to delete?')" class="btn btn-danger"><i class="fa fa-remove"></i></a>
+                            <a href="<?php echo site_url("event/delete_event/".$eventdlist->event_id); ?>" onclick="return confirm('Yakin akan menghapus?')" class="btn btn-danger"><i class="fa fa-remove"></i></a>
                         </td>
                     </tr>
                     <?php
@@ -196,6 +225,11 @@
         });
 
       });
+    </script>
+    <script>
+    $(function(){
+       $(".select2").select2();
+    });
     </script>
  
     

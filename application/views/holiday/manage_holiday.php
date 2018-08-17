@@ -16,12 +16,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Holiday
-            <small>Holiday panel</small>
+            Hari Libur
+            <small>Panel Hari Libur</small>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Holiday</li>
+            <li class="active">Hari Libur</li>
           </ol>
         </section>
 
@@ -31,7 +31,7 @@
             <div class="col-md-3">
               <div class="box box-solid">
                 <div class="box-header with-border">
-                  <h4 class="box-title">Upcomming Holiday</h4>
+                  <h4 class="box-title">Hari Libur</h4>
                 </div>
                 <div class="box-body">
                   <!-- the events -->
@@ -44,7 +44,7 @@
               </div><!-- /. box -->
               <div class="box box-solid">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Create Holiday</h3>
+                  <h3 class="box-title">Buat Hari Libur</h3>
                 </div>
                 <div class="box-body">
                 
@@ -56,12 +56,12 @@
                             echo $error;
                         } ?>
                   <div class="input-group">
-                    <input type="text" class="form-control" id="start_date" name="start_date" placeholder="Show Date" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask>
+                    <input type="text" class="form-control" id="start_date" name="start_date" placeholder="Tanggal Libur" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask>
                   </div><!-- /input-group -->
                   <div class="input-group">
-                    <input id="holiday_title" type="text" class="form-control" name="holiday_title" placeholder="Holiday Title" />
+                    <input id="holiday_title" type="text" class="form-control" name="holiday_title" placeholder="Hari Libur" />
                     <div class="input-group-btn">
-                      <input id="" type="submit" class="btn btn-primary btn-flat" name="addholiday" value="Add" />
+                      <input id="" type="submit" class="btn btn-primary btn-flat" name="addholiday" value="Tambah" />
                     </div><!-- /btn-group -->
                   </div><!-- /input-group -->
                   </form>

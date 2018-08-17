@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Top 10 Student  
-            <small>Manage Top 10 Student</small>
+            Top 10 Siswa / Peserta  
+            <small>Kelola Top 10</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Top 10 Student</a></li>
-            <li class="active">List Top 10 Student</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Top 10 </a></li>
+            <li class="active">Daftar Top 10</li>
           </ol>
         </section>
 
@@ -26,7 +26,7 @@
         <section class="content">
          <div class="row">
          <div class="col-md-12">
-          <a href="<?php echo site_url("topstudent/add_topstudent"); ?>" class="btn btn-primary pull-right">Add</a>
+          <a href="<?php echo site_url("topstudent/add_topstudent"); ?>" class="btn btn-primary pull-right">Tambah</a>
                      
          </div>
          
@@ -39,11 +39,11 @@
                     <thead>
                       <tr>
                        <th>ID</th> 
-                        <th> Name</th>
-                         <th> Roll No</th>
-                        <th> Standard</th>
-                        <th>Student Rank</th>
-                        <th width="80">Action</th>
+                        <th>Nama</th>
+                       <!--  <th> Roll No</th> -->
+                        <th>Standar</th>
+                        <th>Peringkat</th>
+                        <th width="80">Aksi</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -55,12 +55,12 @@
                     <form method="post">
                        <td><?php echo $topstudents->top_id; ?> </td>
                         <td><?php echo $topstudents->student_name; ?> </td>
-                         <td><?php echo $topstudents->student_roll_no; ?> </td>
+                         <!--<td><?php echo $topstudents->student_roll_no; ?> </td> -->
                           <td><?php echo $topstudents->standard_title; ?> </td>
                           <td><?php echo $topstudents->student_rank; ?> </td>
                       
                         <td>
-                            <a href="<?php echo site_url("topstudent/delete_topstudent/".$topstudents->top_id); ?>" onclick="return confirm('are you sure to delete?')" class="btn btn-danger"><i class="fa fa-remove"></i></a>
+                            <a href="<?php echo site_url("topstudent/delete_topstudent/".$topstudents->top_id); ?>" onclick="return confirm('Yakinkah akan menghapus?')" class="btn btn-danger"><i class="fa fa-remove"></i></a>
                         </td>
                         </form>
                     </tr>

@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            School Profile
-            <small>Manage Profile</small>
+            Profil Kelas
+            <small>Kelola Profil</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> School</a></li>
-            <li class="active">School Profile</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Kelas</a></li>
+            <li class="active">Profil Kelas</li>
           </ol>
         </section>
 
@@ -44,55 +44,55 @@
                                 <div class="form-group">
                                     <div class="row">
                                     <div class="col-md-12">
-                                    <p style="border-bottom: 1px solid black;"><strong>School Detail</strong></p>
+                                    <p style="border-bottom: 1px solid black;"><strong>Kelas Detail</strong></p>
                                     </div>
                                       <div class="col-md-6">
-                                        <label for="user_fullname">School Name <span class="red">*</span></label>
+                                        <label for="user_fullname">Nama Kelas <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="school_name" name="school_name"  value="<?php if(isset($schooldetail->school_name)) echo $schooldetail->school_name;  ?>"/>
                                     </div>
                                      <div class="col-md-6">
-                                        <label for="user_fullname">School Person Name <span class="red">*</span></label>
+                                        <label for="user_fullname">Penanggung Jawab Kelas<span class="red">*</span></label>
                                         <input type="text" class="form-control" id="school_person_name" name="school_person_name"  value="<?php if(isset($schooldetail->school_person_name)) echo $schooldetail->school_person_name;  ?>"/>
                                     </div>
                                       <div class="col-md-6">
-                                        <label for="user_fullname">School Address <span class="red">*</span></label>
+                                        <label for="user_fullname">Alamat <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="school_address" name="school_address"  value="<?php if(isset($schooldetail->school_address)) echo $schooldetail->school_address;  ?>"/>
                                     </div>
                                      <div class="col-md-6">
-                                        <label for="user_fullname">City Name <span class="red">*</span></label>
+                                        <label for="user_fullname">Kota <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="school_city" name="school_city"  value="<?php if(isset($schooldetail->school_city)) echo $schooldetail->school_city;  ?>"/>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="user_fullname">State Name</label>
+                                        <label for="user_fullname">Kabupaten</label>
                                         <input type="text" class="form-control" id="school_state" name="school_state"  value="<?php if(isset($schooldetail->school_state)) echo $schooldetail->school_state;  ?>"/>
                                     </div>
                                      <div class="col-md-6">
-                                        <label for="user_fullname">Postal code or Pincode</label>
+                                        <label for="user_fullname">Kode Pos</label>
                                         <input type="text" class="form-control" id="school_postal_code" name="school_postal_code"  value="<?php if(isset($schooldetail->school_postal_code)) echo $schooldetail->school_postal_code;  ?>"/>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="user_fullname">School Phone1 <span class="red">*</span></label>
+                                        <label for="user_fullname">Telepon 1<span class="red">*</span></label>
                                         <input type="text" class="form-control" id="school_phone1" name="school_phone1"  value="<?php if(isset($schooldetail->school_phone1)) echo $schooldetail->school_phone1;  ?>"/>
                                     </div>
                                      <div class="col-md-6">
-                                        <label for="user_fullname">School Phone2</label>
+                                        <label for="user_fullname">Telepon 2</label>
                                         <input type="text" class="form-control" id="school_phone2" name="school_phone2"  value="<?php if(isset($schooldetail->school_phone2)) echo $schooldetail->school_phone2;  ?>"/>
                                     </div>
                                      <div class="col-md-6">
-                                        <label for="user_fullname">School Email <span class="red">*</span></label>
+                                        <label for="user_fullname">Email <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="school_email" name="school_email"  value="<?php if(isset($schooldetail->school_email)) echo $schooldetail->school_email;  ?>"/>
                                     </div>
                                      <div class="col-md-6">
-                                        <label for="user_fullname">School Fax No </label>
+                                        <label for="user_fullname">Fax No </label>
                                         <input type="text" class="form-control" id="school_fax" name="school_fax"  value="<?php if(isset($schooldetail->school_fax)) echo $schooldetail->school_fax;  ?>"/>
                                     </div>
                                      <div class="col-md-6">
-                                        <label for="user_fullname">School Logo </label>
+                                        <label for="user_fullname">Logo </label>
                                         <input type="file" class="form-control" id="school_logo" name="school_logo" />
                                     </div>
                                     <?php if(isset($schooldetail->school_logo) && $schooldetail->school_logo!=""){ ?>
                                      <div class="col-md-6">
-                                        <label for="user_fullname">Your School Logo </label>
+                                        <label for="user_fullname">Logo Kelas</label>
                                       <?php
                                             $img = $this->config->item('base_url')."uploads/profile/".$schooldetail->school_logo; ?>                                 
                                             <img src="<?php echo $img; ?>" style="height: 50px; width: 50px; margin-top: 10px;"/>
@@ -107,7 +107,7 @@
                               </div><!-- /.box-body -->
             
                               <div class="box-footer">
-                                <button type="submit" name="saveprofile" class="btn btn-primary">Update Profile</button>
+                                <button type="submit" name="saveprofile" class="btn btn-primary">Perbarui Profil</button>
                               </div>
                             </form>
                         </div>

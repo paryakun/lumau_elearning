@@ -14,7 +14,7 @@
         <section class="content-header">
           <h1>
             Dashboard
-            <small>Control panel</small>
+            <small></small>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -36,12 +36,12 @@
                                     $event =  $q->result();
                                     echo count($event);
                   ?></h3>
-                  <p>School Event</p>
+                  <p>Materi Kuliah / Pelatihan</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-calendar"></i>
                 </div>
-                <?php echo anchor('event/manage_event', 'Manage Event <i class="fa fa-arrow-circle-right"></i>', 'class="small-box-footer"'); ?>
+                <?php echo anchor('event/manage_event', 'Kelola Materi <i class="fa fa-arrow-circle-right"></i>', 'class="small-box-footer"'); ?>
                 
               </div>
             </div><!-- ./col -->
@@ -56,12 +56,12 @@
                                     echo count($student);
                   ?>
                   </h3>
-                  <p>Student Available</p>
+                  <p>Siswa / Peserta</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-person-add"></i>
                 </div>
-                <?php echo anchor('student/add_student', 'Add Student <i class="fa fa-arrow-circle-right"></i>', 'class="small-box-footer"'); ?>
+                <?php echo anchor('student/add_student', 'Tambah Siswa / Peserta <i class="fa fa-arrow-circle-right"></i>', 'class="small-box-footer"'); ?>
               </div>
             </div><!-- ./col -->
             
@@ -76,12 +76,12 @@
                                     echo count($student);
                   ?>
                   </h3>
-                  <p>Teacher Available</p>
+                  <p>Instruktur</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-person-add"></i>
                 </div>
-                <?php echo anchor('teacher/add_teacher', 'Add Teacher <i class="fa fa-arrow-circle-right"></i>', 'class="small-box-footer"'); ?>
+                <?php echo anchor('teacher/add_teacher', 'Tambah Instruktur <i class="fa fa-arrow-circle-right"></i>', 'class="small-box-footer"'); ?>
               </div>
             </div><!-- ./col -->
             
@@ -96,12 +96,12 @@
                                     echo count($student);
                   ?>
                   </h3>
-                  <p>Exam </p>
+                  <p>Ujian </p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-briefcase"></i>
                 </div>
-                <?php echo anchor('exam/manage_exam', 'Manage Exam <i class="fa fa-arrow-circle-right"></i>', 'class="small-box-footer"'); ?>
+                <?php echo anchor('exam/manage_exam', 'Kelola Ujian <i class="fa fa-arrow-circle-right"></i>', 'class="small-box-footer"'); ?>
               </div>
             </div><!-- ./col -->
           
@@ -111,7 +111,7 @@
             <div class="col-md-4">
              
              <div class="panel panel-default">
-                                  <div class="panel-heading">Up Comming Holiday</div>
+                                  <div class="panel-heading">Hari Libur</div>
                                   <div class="panel-body">
                                    <div id="external-events">
                                  <?php
@@ -128,7 +128,7 @@
           <div class="col-md-4">
              
              <div class="panel panel-default">
-                                  <div class="panel-heading">Today Event</div>
+                                  <div class="panel-heading">Materi Hari Ini</div>
                                   <div class="panel-body">
                                     <div id="external-events">
                                  <?php

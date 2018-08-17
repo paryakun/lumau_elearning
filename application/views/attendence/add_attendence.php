@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Add Attendence
-            <small>Manage Attendence</small>
+            Tambah Kehadiran
+            <small>Kelola Kehadiran</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Attendence</a></li>
-            <li class="active">Add Attendence</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Kehadiran</a></li>
+            <li class="active">Tambah Kehadiran</li>
           </ol>
         </section>
 
@@ -32,14 +32,14 @@
                                 <? if(isset($error)){
                             echo $error;
                         } ?>
-              <strong>Manualy Add Attendence</strong>
+          
              
                 <form method="post">
                 
                 <div class="col-md-3">
-                <label for="standard">Select Standard<span class="red">*</span></label>
+                <label for="standard">Pilih Standar<span class="red">*</span></label>
                  <select class="form-control select2" name="standard" id="standard" style="width: 100%;">
-                                           <option value="">Select Standard</option>
+                                           <option value="">Pilih Standar</option>
                                             <?php foreach($school_standard as $standard){
                                                 ?>
                                                 <option value="<?php echo $standard->standard_id; ?>" <?php  if(isset($_POST["standard"]) && $_POST["standard"]==$standard->standard_id){ echo "selected"; } ?>><?php echo $standard->standard_title; ?></option>
@@ -49,7 +49,7 @@
                 </div>
                   <div class="col-md-3">
                      <div class="form-group">
-                                  <label for="attendencedate">Attendence Date <span class="red">*</span></label>
+                                  <label for="attendencedate">Tanggal Kehadiran <span class="red">*</span></label>
                                     <div class="input-group">
                                       <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
@@ -62,9 +62,9 @@
                                         
                   <div class="col-md-2">
                   <div class="form-group">
-                                  <label for="start_date">View Student </label>
+                                  <label for="start_date">Lihat</label>
                                     <div class="input-group">
-                                  <input type="submit" name="studentlist" class="btn btn-primary" value="View Student"/>   
+                                  <input type="submit" name="studentlist" class="btn btn-primary" value="Lihat Siswa / Peserta"/>   
                                   
                                   </div>
                                 </div>
@@ -78,7 +78,7 @@
          </div>
 
          
-          <div class="col-md-12">
+     <!--     <div class="col-md-12">
                <strong>Upload Excel File To Add Attendence</strong>
                 <form method="post" enctype="multipart/form-data">
  
@@ -86,11 +86,11 @@
                 <label for="standard">Select Standard<span class="red">*</span></label>
                  <select class="form-control select2" name="standard" id="standard" style="width: 100%;">
                                            <option value="">Select Standard</option>
-                                            <?php foreach($school_standard as $standard){
+                                            <?php //foreach($school_standard as $standard){
                                                 ?>
-                                                <option value="<?php echo $standard->standard_id; ?>" <?php  if(isset($_POST["standard"]) && $_POST["standard"]==$standard->standard_id){ echo "selected"; } ?>><?php echo $standard->standard_title; ?></option>
+                                                <option value="<?php// echo $standard->standard_id; ?>" <?php  //if(isset($_POST["standard"]) && $_POST["standard"]==$standard->standard_id){ echo "selected"; } ?>><?php //echo $standard->standard_title; ?></option>
                                                 <?php
-                                            } ?>
+                                          //  } ?>
                  </select>
                 </div>
                   <div class="col-md-3">
@@ -100,7 +100,7 @@
                                       <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                       </div>
-                                  <input type="text" class="form-control" id="attendencedate" name="attendencedate" placeholder="Show Date" value="<?php  if(isset($_POST["attendencedate"])) echo $_POST["attendencedate"]; ?>" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask>
+                                  <input type="text" class="form-control" id="attendencedate" name="attendencedate" placeholder="Show Date" value="<?php // if(isset($_POST["attendencedate"])) echo $_POST["attendencedate"]; ?>" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask>
                                   </div>
                                 </div>
                 </div>
@@ -130,9 +130,9 @@
                 
                 
                 
-         </div>
+         </div>  -->
          
-         <div class="col-md-12">
+      <!--   <div class="col-md-12">
               <strong>Download Attendence For Excel File</strong>
               
                 <form method="post">
@@ -141,11 +141,11 @@
                 <label for="standard">Select Standard<span class="red">*</span></label>
                  <select class="form-control select2" name="standard" id="standard" style="width: 100%;">
                                            <option value="">Select Standard</option>
-                                            <?php foreach($school_standard as $standard){
+                                            <?php // foreach($school_standard as $standard){
                                                 ?>
-                                                <option value="<?php echo $standard->standard_id; ?>" <?php  if(isset($_POST["standard"]) && $_POST["standard"]==$standard->standard_id){ echo "selected"; } ?>><?php echo $standard->standard_title; ?></option>
+                                                <option value="<?php // echo $standard->standard_id; ?>" <?php // if(isset($_POST["standard"]) && $_POST["standard"]==$standard->standard_id){ echo "selected"; } ?>><?php // echo $standard->standard_title; ?></option>
                                                 <?php
-                                            } ?>
+                                          //  } ?>
                  </select>
                 </div>
                   <div class="col-md-3">
@@ -155,7 +155,7 @@
                                       <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                       </div>
-                                  <input type="text" class="form-control" id="attendencedate" name="attendencedate" placeholder="Show Date" value="<?php  if(isset($_POST["attendencedate"])) echo $_POST["attendencedate"]; ?>" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask>
+                                  <input type="text" class="form-control" id="attendencedate" name="attendencedate" placeholder="Show Date" value="<?php  // if(isset($_POST["attendencedate"])) echo $_POST["attendencedate"]; ?>" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask>
                                   </div>
                                 </div>
                 </div>
@@ -176,7 +176,7 @@
                 
                 
                 
-         </div>
+         </div> -->
          
             <?php if(isset($student)){ ?>
                 <div class="col-md-12">

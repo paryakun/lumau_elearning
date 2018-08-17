@@ -119,11 +119,11 @@
                   <table class="table">
     
                     <tbody>
-                      <tr class="success">
+                    <!--  <tr class="success">
                         <td>Roll No : </td>
-                        <td><?php echo $student_detail->student_roll_no; ?></td>
+                        <td><?php // echo $student_detail->student_roll_no; ?></td>
                         
-                      </tr>
+                      </tr> -->
                         <tr class="info">
                         <td>Standard :</td>
                         <td><?php echo $student_detail->standard_title; ?></td>
@@ -134,31 +134,61 @@
                         <td><?php echo $student_detail->student_unique_no; ?></td>
                         
                       </tr>
-                       <tr class="success">
+                 <!--      <tr class="success">
                         <td>Enrolment No :</td>
-                        <td><?php if($student_detail->student_enr_no!=""){ echo $student_detail->student_enr_no; } else{ echo "data not available";}?></td>
+                        <td><?php // if($student_detail->student_enr_no!=""){ echo $student_detail->student_enr_no; } else{ echo "data not available";}?></td>
                         
-                      </tr>
-                     <tr class="danger">
+                      </tr> -->
+               <!--      <tr class="danger">
                         <td>Branch :</td>
-                        <td><?php if($student_detail->student_branch!=""){ echo $student_detail->student_branch; } else{ echo "data not available";}?></td>
+                        <td><?php // if($student_detail->student_branch!=""){ echo $student_detail->student_branch; } else{ echo "data not available";}?></td>
                         
-                      </tr>
-                       <tr class="info">
+                      </tr> -->
+                   <!--    <tr class="info">
                         <td>Semester :</td>
-                        <td><?php if($student_detail->student_semester!=""){ echo $student_detail->student_semester; } else{ echo "data not available";}?></td>
+                        <td><?php //if($student_detail->student_semester!=""){ echo $student_detail->student_semester; } else{ echo "data not available";}?></td>
                         
-                      </tr>
-                       <tr class="danger">
+                      </tr> -->
+                    <!--   <tr class="danger">
                         <td>Division :</td>
-                        <td><?php if($student_detail->student_division!=""){ echo $student_detail->student_division; } else{ echo "data not available";}?></td>
+                        <td><?php // if($student_detail->student_division!=""){ echo $student_detail->student_division; } else{ echo "data not available";}?></td>
                         
-                      </tr>
-                       <tr class="success">
+                      </tr> -->
+                     <!--  <tr class="success">
                         <td>Batch :</td>
-                        <td><?php if($student_detail->student_batch!=""){ echo $student_detail->student_batch; } else{ echo "data not available";}?></td>
+                        <td><?php // if($student_detail->student_batch!=""){ echo $student_detail->student_batch; } else{ echo "data not available";}?></td>
                         
-                      </tr>
+                      </tr> -->
+                      <tr class="success">
+                        <td>Pangkat :</td>
+                        <td><?php if($student_detail->pangkat!=""){ echo $student_detail->pangkat; } else{ echo "data not available";}?></td>
+                        
+                      </tr> 
+                      <tr class="success">
+                        <td>Korp :</td>
+                        <td><?php if($student_detail->korp!=""){ echo $student_detail->korp; } else{ echo "data not available";}?></td>
+                        
+                      </tr> 
+                      <tr class="success">
+                        <td>NRP :</td>
+                        <td><?php if($student_detail->nrp!=""){ echo $student_detail->nrp; } else{ echo "data not available";}?></td>
+                        
+                      </tr> 
+                      <tr class="success">
+                        <td>Kesatuan :</td>
+                        <td><?php if($student_detail->kesatuan!=""){ echo $student_detail->kesatuan; } else{ echo "data not available";}?></td>
+                        
+                      </tr> 
+                      <tr class="success">
+                        <td>Jabatan :</td>
+                        <td><?php if($student_detail->jabatan!=""){ echo $student_detail->jabatan; } else{ echo "data not available";}?></td>
+                        
+                      </tr> 
+                      <tr class="success">
+                        <td>Matra :</td>
+                        <td><?php if($student_detail->matra!=""){ echo $student_detail->matra; } else{ echo "data not available";}?></td>
+                        
+                      </tr> 
                     </tbody>
                   </table>
                 </div>

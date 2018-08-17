@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Notice Board
-            <small>Manage Notice Board</small>
+            Papan Pengumuman
+            <small>Kelola Papan Pengumuman</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Notice Board</a></li>
-            <li class="active">Manage Noticeboard</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Papan Pengumuman</a></li>
+            <li class="active">Kelola Papan Pengumuman</li>
           </ol>
         </section>
 
@@ -31,7 +31,7 @@
                 <div class="col-md-4">
                     <div class="box">
                         <div class="box-header">
-                           <p><strong>Add Notice (Ex. Holiday, Parent Meating, other, etc)</strong></p>
+                           <p><strong>Tambah Pengumuman (Hari Libur, Pertemuan Orang Tua, dll)</strong></p>
                         </div>
                         <div class="box-body">
                         
@@ -47,11 +47,11 @@
                                     <div class="row">
                                     
                                     <div class="col-md-12">
-                                        <label for="notice_description">Notice Description <span class="red">*</span></label>
-                                       <textarea rows="5" id="notice_description" name="notice_description" class="form-control" placeholder="Notice Detail"></textarea>
+                                        <label for="notice_description">Deskripsi<span class="red">*</span></label>
+                                       <textarea rows="5" id="notice_description" name="notice_description" class="form-control" placeholder="Detail Pengumuman"></textarea>
                                     </div>
                                     <div class="col-md-12">
-                                        <label for="notice_type">Select Notice Type <span class="red">*</span></label>
+                                        <label for="notice_type">Pilih Tipe Pengumuman <span class="red">*</span></label>
                                         <select name="notice_type" class="form-control select2"> 
                                             <?php foreach($this->config->item("notice_type") as $notice){ ?>
                                             <option value="<?php echo $notice; ?>"><?php echo $notice; ?></option>
@@ -66,7 +66,7 @@
                               </div><!-- /.box-body -->
             
                               <div class="box-footer">
-                                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
                               </div>
                             </form>
                         </div>
@@ -75,16 +75,16 @@
                     <div class="col-md-8">
                     <div class="box">
                 <div class="box-header">
-                <p><strong>Note*: If Status is off then not display notice in student application</strong></p>
+                <p><strong>Note*: Jika status off maka pengumuman tidak muncul di Aplikasi Mobile</strong></p>
                 <table id="example2" class="table table-bordered table-hover">
                     <thead>
                       <tr>
                         <th>ID</th>
-                        <th>Notice Description Title</th>
-                        <th>Notice Type</th>
-                        <th>Created Date</th>
+                        <th>Deskripsi Pengumuman</th>
+                        <th>Tipe Pengumuman</th>
+                        <th>Tanggal Berlaku</th>
                         <th>Status</th>
-                        <th width="100">Action</th>
+                        <th width="100">Aksi</th>
                       </tr>
                     </thead>
                     <tbody>

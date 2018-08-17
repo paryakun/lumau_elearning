@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Add Teacher
-            <small>Manage Teacher</small>
+            Tambah Instruktur
+            <small>Kelola Instruktur</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Teacher</a></li>
-            <li class="active">Add Teacher</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Instruktur</a></li>
+            <li class="active">Tambah Instruktur</li>
           </ol>
         </section>
 
@@ -26,7 +26,7 @@
         <section class="content">
             <div class="row">
               <div class="col-md-12">
-                <a href="<?php echo site_url("teacher/list_teacher"); ?>" class="btn btn-primary pull-right">List</a>
+                <a href="<?php echo site_url("teacher/list_teacher"); ?>" class="btn btn-primary pull-right">Daftar</a>
                 </div>
                 <div class="col-md-12">
                 <form role="form" action="" method="post" enctype="multipart/form-data">
@@ -50,19 +50,19 @@
                                 <div class="form-group">
                                     <div class="row">
                                     <div class="col-md-12">
-                                    <p style="border-bottom: 1px solid black;"><strong>Teacher Detail</strong> (Please Fill * all Required Field)</p>
+                                    <p style="border-bottom: 1px solid black;"><strong>Detail Instruktur</strong> ((Isi semua tanda*)</p>
                                     </div>
-                                   <h4 class="box-title">General Information</h4>
+                                   <h4 class="box-title">Informasi Umum</h4>
                                       <div class="col-md-6">
-                                        <label for="teacher_name">Teacher Name <span class="red">*</span></label>
+                                        <label for="teacher_name">Nama Instruktur <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="teacher_name" name="teacher_name" value="<?php if(isset($_REQUEST["teacher_name"])){echo $_REQUEST["teacher_name"]; } ?>"/>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="teacher_birthdate">Teacher Birthdate <span class="red">*</span></label>
+                                        <label for="teacher_birthdate">Tanggal Lahir <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="teacher_birthdate" name="teacher_birthdate" placeholder="Show Date" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask value="<?php if(isset($_REQUEST["teacher_birthdate"])){echo $_REQUEST["teacher_birthdate"]; } ?>">
                                     </div>
                                      <div class="col-md-6">
-                                     <label>Gender :</label>
+                                     <label>Jenis Kelamin :</label>
                                       <div class="radio">
                                         <label>
                                           <input type="radio" checked="" value="male" id="" name="gender" />
@@ -76,7 +76,7 @@
                                        
                                     </div>
                                     <div class="col-md-6">
-                                     <label>Marital Status</label>
+                                     <label>Status Pernikahan</label>
                                       <div class="radio">
                                         <label>
                                           <input type="radio" checked="" value="single" id="" name="maritalstatus" />
@@ -91,22 +91,22 @@
                                     </div>
                                  
                                      <div class="col-md-6">
-                                        <label for="teacher_address">Teacher Address <span class="red">*</span></label>
+                                        <label for="teacher_address">Alamat <span class="red">*</span></label>
                                        <textarea rows="2" id="teacher_address" name="teacher_address" class="form-control"><?php if(isset($_REQUEST["teacher_address"])){echo $_REQUEST["teacher_address"]; } ?></textarea>
                                     </div>
                                     
                                      <div class="col-md-6">
-                                        <label for="teacher_phone">Teacher Phone  <span class="red">*</span></label>
+                                        <label for="teacher_phone">Telepon <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="teacher_phone" name="teacher_phone" value="<?php if(isset($_REQUEST["teacher_phone"])){echo $_REQUEST["teacher_phone"]; } ?>"/>
                                     </div>
                                      <div class="col-md-6">
-                                        <label for="teacher_email">Teacher Email  </label>
+                                        <label for="teacher_email">Email  </label>
                                         <input type="email" class="form-control" id="teacher_email" name="teacher_email" placeholder="teachet@gmail.com" value="<?php if(isset($_REQUEST["teacher_email"])){echo $_REQUEST["teacher_email"]; } ?>"/>
                                     </div>
                                     
                                  
                                      <div class="col-md-6">
-                                        <label for="teacher_photo">Teacher Photo </label>
+                                        <label for="teacher_photo">Foto </label>
                                         <input type="file" class="form-control" id="teacher_photo" name="teacher_photo" />
                                     </div>
                                 
@@ -130,25 +130,25 @@
                                  <div class="form-group">
                                     <div class="row">
                                    
-                                   <h4 class="box-title">Education Information</h4>
+                                   <h4 class="box-title">Informasi Pendidikan</h4>
                                     
                                
                                      <div class="col-md-6">
-                                        <label for="teacher_exp">Teaching Experience  </label>
+                                        <label for="teacher_exp">Pengalaman Mengajar  </label>
                                         <input type="text" class="form-control" id="teacher_exp" name="teacher_exp" placeholder="Ex. 1 year 6 month, 6 month, 4 year, ect" value="<?php if(isset($_REQUEST["teacher_exp"])){echo $_REQUEST["teacher_exp"]; } ?>"/>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="teacher_education">Teacher Education  <span class="red">*</span></label>
+                                        <label for="teacher_education">Pendidikan <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="teacher_education" name="teacher_education" placeholder="Ex. M.A., B.Ed, Phd, P.T.C, Etc" value="<?php if(isset($_REQUEST["teacher_education"])){echo $_REQUEST["teacher_education"]; } ?>"/>
                                     </div>
                                   
                                     <div class="col-md-6">
-                                        <label for="teacher_notes">Extra Notes </label>
+                                        <label for="teacher_notes">Catatan Ekstra </label>
                                        <textarea rows="2" id="teacher_notes" name="teacher_notes" placeholder="extra activity, extra archivement, award, etc" class="form-control"><?php if(isset($_REQUEST["teacher_notes"])){echo $_REQUEST["teacher_notes"]; } ?></textarea>
                                     </div>
                                       <div class="col-md-12">
                                       <label for="teacher_detail">Teacher Detail <span class="red">*</span> </label>
-                                      <br /><label>Note <span class="red">*</span>: Teacher Standard, Teacher Subject, Teacher All Detail, Etc</label>
+                                      <br /><label>Catatan<span class="red">*</span>: Standar, Subjek, Semua detail Instruktur, Etc</label>
                                          <textarea id="editor1" name="editor1" rows="10" cols="80" >
                                           <?php if(isset($_REQUEST["editor1"])){echo $_REQUEST["editor1"]; } ?>  
                                         </textarea>
@@ -161,7 +161,7 @@
                               </div><!-- /.box-body -->
             
                               <div class="box-footer">
-                                <button type="submit" name="saveteacher" class="btn btn-primary">Save Data</button>
+                                <button type="submit" name="saveteacher" class="btn btn-primary">Simpan Data</button>
                               </div>
                             </form>
                         </div>

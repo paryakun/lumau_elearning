@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-             Enquiry
-            <small>Student Enquiry</small>
+             Pertanyaan
+            <small>Pertanyaan Siswa / Peserta</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Enquiry</a></li>
-            <li class="active">Manage Enquiry</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Pertanyaan</a></li>
+            <li class="active">Kelola Pertanyaan</li>
           </ol>
         </section>
 
@@ -42,14 +42,14 @@
                     <thead>
                       <tr>
                         <th>ID</th>
-                        <th>Student Name</th>
-                        <th>Standard</th>
-                        <th>Roll No</th>
-                        <th>Subject</th>
-                        <th>Message</th>
-                        <th>Your Reply</th>
-                        <th>Date</th>
-                        <th width="80">Action</th>
+                        <th>Nama</th>
+                        <th>Standar</th>
+                        <!-- <th>Roll No</th> -->
+                        <th>Subjek</th>
+                        <th>Pesan</th>
+                        <th>Jawaban Anda</th>
+                        <th>Tanggal</th>
+                        <th width="80">Aksi</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -59,7 +59,7 @@
                         <td><?php echo $chatlist->chat_id; ?></td>
                         <td><?php echo $chatlist->student_name; ?></td>
                         <td><?php echo $chatlist->standard_title; ?></td>
-                        <td><?php echo $chatlist->student_roll_no; ?></td>
+                      <!--  <td><?php echo $chatlist->student_roll_no; ?></td> -->
                         <td><?php echo $chatlist->subject; ?></td>
                         <td><?php echo substr($chatlist->message, 0,500); ?></td>
                         <form method="post">
@@ -71,7 +71,7 @@
                          }else{ ?>
                             <div class="input-group">
                                <div class="input-group-btn">
-                               <a href="<?php echo site_url("chat/chat_reply/".$chatlist->chat_id); ?>" class="btn btn-primary btn-flat"><i class="fa fa-reply"></i> Reply</a>
+                               <a href="<?php echo site_url("chat/chat_reply/".$chatlist->chat_id); ?>" class="btn btn-primary btn-flat"><i class="fa fa-reply"></i> Balas</a>
                             
                             </div><!-- /btn-group -->
                         </div>
@@ -84,7 +84,7 @@
                          </form>
                         <td>
                            
-                            <a href="<?php echo site_url("chat/delete_chat/".$chatlist->chat_id); ?>" onclick="return confirm('are you sure to delete?')" class="btn btn-danger"><i class="fa fa-remove"></i></a>
+                            <a href="<?php echo site_url("chat/delete_chat/".$chatlist->chat_id); ?>" onclick="return confirm('Yakin akan menghapus?')" class="btn btn-danger"><i class="fa fa-remove"></i></a>
                         </td>
                     </tr>
                     <?php

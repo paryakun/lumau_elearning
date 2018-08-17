@@ -28,8 +28,8 @@ $config['base_url'] = 'http://localhost/lumau_elearning/';
 $config['theme_admin'] = "theme/admin";
 $config['theme_frontend'] = "theme/frontend";
 
-$config['growth']=array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-$config['notice_type']=array("holiday", "meating", "circular", "other");
+$config['growth']=array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember");
+$config['notice_type']=array("Hari Libur", "Pertemuan", "Lainnya");
 
 $config['GOOGLE_API_KEY'] = 'AIzaSyCTtRF56D0BiuiTiR10pqOcpd1YcTroOYk';
 

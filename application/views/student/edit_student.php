@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Update Student
-            <small>Manage Student</small>
+            Perbarui Siswa / Peserta
+            <small>Kelola</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Student</a></li>
-            <li class="active">Update Student</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Siswa / Peserta</a></li>
+            <li class="active">Perbarui</li>
           </ol>
         </section>
 
@@ -26,7 +26,7 @@
         <section class="content">
             <div class="row">
               <div class="col-md-12">
-                <a href="<?php echo site_url("student/list_student"); ?>" class="btn btn-primary pull-right">List</a>
+                <a href="<?php echo site_url("student/list_student"); ?>" class="btn btn-primary pull-right">Daftar</a>
                 </div>
                 <div class="col-md-12">
                     <div class="box">
@@ -48,23 +48,23 @@
                                 <div class="form-group">
                                     <div class="row">
                                     <div class="col-md-12">
-                                    <p style="border-bottom: 1px solid black;"><strong>Student Detail</strong></p>
+                                    <p style="border-bottom: 1px solid black;"><strong>Detail</strong></p>
                                     </div>
                                     
                                       <div class="col-md-6">
-                                        <label for="student_name">Student Name <span class="red">*</span></label>
+                                        <label for="student_name">Nama Siswa <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="student_name" name="student_name" value="<?php echo $student->student_name; ?>"/>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="student_birthdate">Student Birthdate <span class="red">*</span></label>
+                                        <label for="student_birthdate">Tanggal Lahir <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="student_birthdate" name="student_birthdate" placeholder="Show Date" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask value="<?php echo $student->student_birthdate; ?>">
                                     </div>
-                                      <div class="col-md-6">
+                                  <!--    <div class="col-md-6">
                                         <label for="student_roll_no">Student Roll No <span class="red">*</span></label>
-                                        <input type="text" class="form-control" id="student_roll_no" name="student_roll_no" value="<?php echo $student->student_roll_no; ?>"/>
-                                    </div>
+                                        <input type="text" class="form-control" id="student_roll_no" name="student_roll_no" value="<?php //echo $student->student_roll_no; ?>"/>
+                                    </div> -->
                                      <div class="col-md-6">
-                                        <label for="student_standard">Student Standard <span class="red">*</span></label>
+                                        <label for="student_standard">Standar <span class="red">*</span></label>
                                         <select class="form-control select2" name="student_standard" id="student_standard" style="width: 100%;">
                                             <?php foreach($school_standard as $standard){
                                                 ?>
@@ -72,58 +72,84 @@
                                                 <?php
                                             } ?>
                                         </select>
-                                        <p>Note: Standard Not Available in list Please : <a href="<?php echo site_url("standard/manage_standard"); ?>"> Add Standard</a></p>
+                                        <p>Note: Standar tidak tersedia ? : <a href="<?php echo site_url("standard/manage_standard"); ?>"> Tambah Standar</a></p>
                                     </div>
                                      <div class="col-md-6">
-                                        <label for="student_address">Student Address <span class="red">*</span></label>
+                                        <label for="student_address">Alamat <span class="red">*</span></label>
                                        <textarea rows="2" id="student_address" name="student_address" class="form-control"><?php echo $student->student_address; ?></textarea>
                                     </div>
                                     
                                      <div class="col-md-6">
-                                        <label for="student_city">Student City <span class="red">*</span></label>
+                                        <label for="student_city">Kota <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="student_city" name="student_city" value="<?php echo $student->student_city; ?>"/>
                                     </div>
                                      <div class="col-md-6">
-                                        <label for="student_phone">Student Phone  <span class="red">*</span></label>
+                                        <label for="student_phone">Telepon  <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="student_phone" name="student_phone" value="<?php echo $student->student_phone; ?>"/>
                                     </div>
                                      <div class="col-md-6">
-                                        <label for="student_parent_phone">Student Parent Phone  </label>
+                                        <label for="student_parent_phone">Telepon Orang Tua </label>
                                         <input type="text" class="form-control" id="student_parent_phone" name="student_parent_phone" value="<?php echo $student->student_parent_phone; ?>"/>
                                     </div>
-                                     <div class="col-md-6">
+                                    <!-- <div class="col-md-6">
                                         <label for="student_enr_no">Student Enrolment No  </label>
-                                        <input type="text" class="form-control" id="student_enr_no" name="student_enr_no" value="<?php echo $student->student_enr_no; ?>"/>
-                                    </div>
+                                        <input type="text" class="form-control" id="student_enr_no" name="student_enr_no" value="<?php // echo $student->student_enr_no; ?>"/>
+                                    </div> -->
                                      <div class="col-md-6">
-                                        <label for="student_email">Student Email  </label>
+                                        <label for="student_email">Email  </label>
                                         <input type="email" class="form-control" id="student_email" name="student_email" value="<?php echo $student->student_email; ?>"/>
                                     </div>
-                                     <div class="col-md-6">
+                                   <!--  <div class="col-md-6">
                                         <label for="student_branch">Student Branch </label>
-                                        <input type="text" class="form-control" id="student_branch" name="student_branch" value="<?php echo $student->student_branch; ?>"/>
-                                    </div>
-                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" id="student_branch" name="student_branch" value="<?php //echo $student->student_branch; ?>"/>
+                                    </div> -->
+                                    <!-- <div class="col-md-6">
                                         <label for="student_semester">Student Semester </label>
-                                        <input type="text" class="form-control" id="student_semester" name="student_semester" value="<?php echo $student->student_semester; ?>"/>
+                                        <input type="text" class="form-control" id="student_semester" name="student_semester" value="<?php //echo $student->student_semester; ?>"/>
+                                    </div> -->
+                                   <!-- <div class="col-md-6">
+                                        <label for="student_division">Student Division</label>
+                                        <input type="text" class="form-control" id="student_division" name="student_division" value="<?php //echo $student->student_division; ?>"/>
+                                    </div> -->
+                                    <!-- <div class="col-md-6">
+                                        <label for="student_batch">Student Batch </label>
+                                        <input type="text" class="form-control" id="student_batch" name="student_batch" value="<?php // echo $student->student_batch; ?>"/>
+                                    </div> -->
+
+
+                                    <div class="col-md-6">
+                                        <label for="pangkat">Pangkat <span class="red">*</span></label>
+                                        <input type="text" class="form-control" id="pangkat" name="pangkat" value="<?php echo $student->pangkat; ?>"/>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="student_division">Student Division</label>
-                                        <input type="text" class="form-control" id="student_division" name="student_division" value="<?php echo $student->student_division; ?>"/>
-                                    </div> 
-                                     <div class="col-md-6">
-                                        <label for="student_batch">Student Batch </label>
-                                        <input type="text" class="form-control" id="student_batch" name="student_batch" value="<?php echo $student->student_batch; ?>"/>
+                                        <label for="korp">Korp <span class="red">*</span></label>
+                                        <input type="text" class="form-control" id="korp" name="korp" value="<?php echo $student->korp; ?>"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="nrp">NRP <span class="red">*</span></label>
+                                        <input type="text" class="form-control" id="nrp" name="nrp" value="<?php echo $student->nrp; ?>"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="kesatuan">Kesatuan <span class="red">*</span></label>
+                                        <input type="text" class="form-control" id="kesatuan" name="kesatuan" value="<?php echo $student->kesatuan; ?>"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="jabatan">Jabatan <span class="red">*</span></label>
+                                        <input type="text" class="form-control" id="jabatan" name="jabatan" value="<?php echo $student->jabatan; ?>"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="matra">Matra <span class="red">*</span></label>
+                                        <input type="text" class="form-control" id="matra" name="matra" value="<?php echo $student->matra; ?>"/>
                                     </div>
                                     
                                     
                                      <div class="col-md-6">
-                                        <label for="student_photo">Student Photo </label>
+                                        <label for="student_photo">Foto </label>
                                         <input type="file" class="form-control" id="student_photo" name="student_photo" />
                                     </div>
                                     <?php if($student->student_photo!=""){ ?>
                                      <div class="col-md-12" >
-                                        <label for="" class="pull-right">Student Photo </label>
+                                        <label for="" class="pull-right">Foto </label>
                                       <?php
                                             $img = $this->config->item('base_url')."uploads/studentphoto/".$student->student_photo; ?>                                 
                                             <img src="<?php echo $img; ?>" style="height: 50px; width: 50px; margin-top: 10px;" class="pull-right"/>
@@ -138,7 +164,7 @@
                               </div><!-- /.box-body -->
             
                               <div class="box-footer">
-                                <button type="submit" name="savestudent" class="btn btn-primary">Update Data</button>
+                                <button type="submit" name="savestudent" class="btn btn-primary">Perbarui Data</button>
                               </div>
                             </form>
                         </div>

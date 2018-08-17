@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Student 
-            <small>Manage Student</small>
+            Siswa / Peserta 
+            <small>Kelola</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Student</a></li>
-            <li class="active">List Student</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Siswa / Peserta</a></li>
+            <li class="active">Daftar</li>
           </ol>
         </section>
 
@@ -29,7 +29,7 @@
             <div class="col-md-6">
                 <div class="col-md-4">
                  <select class="form-control select2" name="filter" id="standard_type"  onchange="choose_standard_type()" style="width: 100%;">
-                                           <option value="">Select Standard</option>
+                                           <option value="">Pilih Standar</option>
                                             <?php foreach($school_standard as $standard){
                                                 ?>
                                                 <option value="<?php echo $standard->standard_id; ?>" <?php  if(isset($_GET["standard"]) && $_GET["standard"]==$standard->standard_id){ echo "selected"; } ?>><?php echo $standard->standard_title; ?></option>
@@ -38,20 +38,20 @@
                                         </select>
                 </div>
                 <div class="col-md-4">
-                 <a href="<?php echo site_url("student/list_student"); ?>" class="btn btn-primary pull-right">Clear Filter</a>
+                 <a href="<?php echo site_url("student/list_student"); ?>" class="btn btn-primary pull-right">Bersihkan Filter</a>
                 </div>                       
                                         
             </div>
             
               <div class="col-md-6">
-               <div class="col-md-4">
-                 <a href="<?php echo site_url("student/student_excel_download"); ?>" class="btn btn-primary pull-right"><i class="fa fa-download"></i> Download Excel</a>
-                </div>  
-                 <div class="col-md-4">
+               <!--<div class="col-md-4">
+                 <a href="<?php // echo site_url("student/student_excel_download"); ?>" class="btn btn-primary pull-right"><i class="fa fa-download"></i> Unduh Excel</a>
+                </div> -->  
+                <!-- <div class="col-md-4">
                  
-                 <a href="<?php echo site_url("student/student_print"); ?>" class="btn btn-primary "><i class="fa fa-print"></i> Print</a>
-                </div>
-             <a href="<?php echo site_url("student/add_student"); ?>" class="btn btn-primary pull-right">Add</a>
+                 <a href="<?php //echo site_url("student/student_print"); ?>" class="btn btn-primary "><i class="fa fa-print"></i> Print</a>
+                </div> -->
+             <a href="<?php echo site_url("student/add_student"); ?>" class="btn btn-primary pull-right">Tambah</a>
             </div>
            
          </div>
@@ -65,17 +65,17 @@
                     <thead>
                       <tr>
                        <th>ID</th> 
-                        <th>Student Name</th>
-                         <th>Standard</th>
-                        <th>Student Roll No</th>
+                        <th>Nama</th>
+                         <th>Standar</th>
+                       <!-- <th>Student Roll No</th> -->
                         <th>Username</th>
                         <th>Password</th>
                         
-                       <th>Student Address</th>
-                      <th>Student Phone</th>
-                      <th>Student Growth</th>
+                       <th>Alamat</th>
+                      <th>Telepon</th>
+                      <th>Perkembangan</th>
                       <th>Status</th>
-                        <th width="80">Action</th>
+                        <th width="80">Aksi</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -89,13 +89,13 @@
                         </td>
                         <td><?php echo $students->standard_title; ?>
                       </td>
-                        <td><?php echo $students->student_roll_no; ?></td>
+                      <!--  <td><?php //echo $students->student_roll_no; ?></td> -->
                         <td><?php echo $students->student_user_name; ?></td>
                         <td><?php echo $password = $students->student_orgpassword; ?></td>
                         <td><?php echo $students->student_address; ?></td>
                         <td><?php echo $students->student_phone; ?></td>
                         <td>
-                        <a href="<?php echo site_url("growth/manage_growth/".$students->student_id); ?>" class="btn btn-primary"><i class="fa fa-plus"></i>Set Growth</a>
+                        <a href="<?php echo site_url("growth/manage_growth/".$students->student_id); ?>" class="btn btn-primary"><i class="fa fa-plus"></i>Set Perkembangan</a>
                        </td>
                          <td><input class='tgl tgl-ios tgl_checkbox' data-table="student_detail" data-status="student_status" data-idfield="student_id"  data-id="<?php echo $students->student_id; ?>" id='cb_<?php echo $students->student_id; ?>' type='checkbox' <?php echo ($students->student_status==1)? "checked" : ""; ?> />
     <label class='tgl-btn' for='cb_<?php echo $students->student_id; ?>'></label></td>

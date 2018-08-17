@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Standard
-            <small>Manage Standard</small>
+            Standar
+            <small>Kelola Standar</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Standard</a></li>
-            <li class="active">Manage Standard</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Standar</a></li>
+            <li class="active">Kelola Standar</li>
           </ol>
         </section>
 
@@ -31,7 +31,7 @@
                 <div class="col-md-4">
                     <div class="box">
                         <div class="box-header">
-                           <p><strong>Add Standard (Ex. 1, 2, 8-A, 11-Arts H.K.G, L.K.G, etc)</strong></p>
+                           <p><strong>Tambah Standar</strong></p>
                         </div>
                         <div class="box-body">
                         
@@ -47,8 +47,8 @@
                                     <div class="row">
                                    
                                       <div class="col-md-12">
-                                        <label for="user_fullname">Standard Name <span class="red">*</span></label>
-                                        <input type="text" class="form-control" id="standard_title" name="standard_title" placeholder="Ex. 1, 2, L.K.G, etc" />
+                                        <label for="user_fullname">Nama Standar <span class="red">*</span></label>
+                                        <input type="text" class="form-control" id="standard_title" name="standard_title" placeholder="Ex. 1, 2, L.K.G, Android, etc" />
                                     </div>
                                    
                                     
@@ -71,8 +71,8 @@
                     <thead>
                       <tr>
                         <th>ID</th>
-                        <th>Standard Name</th>
-                        <th width="80">Action</th>
+                        <th>Nama Standar</th>
+                        <th width="80">Aksi</th>
                       </tr>
                     </thead>
                     <tbody>

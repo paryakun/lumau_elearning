@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Add Student
-            <small>Manage Student</small>
+            Tambah Siswa / Peserta
+            <small>Kelola</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Student</a></li>
-            <li class="active">Add Student</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Siswa / Peserta</a></li>
+            <li class="active">Tambah Siswa</li>
           </ol>
         </section>
 
@@ -26,7 +26,7 @@
         <section class="content">
             <div class="row">
               <div class="col-md-12">
-                <a href="<?php echo site_url("student/list_student"); ?>" class="btn btn-primary pull-right">List</a>
+                <a href="<?php echo site_url("student/list_student"); ?>" class="btn btn-primary pull-right">Daftar</a>
                 </div>
                 <div class="col-md-12">
                     <div class="box">
@@ -52,40 +52,41 @@
                                 <div class="form-group">
                                     <div class="row">
                                     <div class="col-md-12">
-                                    <p style="border-bottom: 1px solid black;"><strong>Student Detail</strong> (Please Fill * all Required Field)</p>
+                                    <p style="border-bottom: 1px solid black;"><strong>Detail</strong> (Isi semua tanda*)</p>
                                     </div>
-                                    <div class="col-md-6">
-                                        <label for="student_unique_no">Student Unique No <span class="red">*</span> </label>
+                                    <div class="col-md-12">
+                                        <label for="student_unique_no">Unique No <span class="red">*</span> </label>
                                         <input type="text" class="form-control" id="student_unique_no" name="student_unique_no" readonly=""  value="<?php echo $student_unique_no; ?>"/>
-                                        <p>Note*: This Unique No Is Auto Generated. You Can not edit. Please Note This Unique No for feture use</p>
+                                        <p>Note*: Unique No di auto generate oleh sistem</p>
                                     </div>
-                                      <div class="col-md-6">
-                                        <label for="student_name">Student Name <span class="red">*</span></label>
+                                      <div class="col-md-12">
+                                        <label for="student_name">Nama <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="student_name" name="student_name" value="<?php if(isset($_REQUEST["student_name"])){echo $_REQUEST["student_name"]; } ?>"/>
                                     </div>
-                                    <div class="col-md-6">
+                                    <p> </p>
+                                   <!-- <div class="col-md-6">
                                         <label for="student_roll_no">Student Roll No <span class="red">*</span></label>
-                                        <input type="text" class="form-control" id="student_roll_no" name="student_roll_no" value="<?php if(isset($_REQUEST["student_roll_no"])){echo $_REQUEST["student_roll_no"]; } ?>"/>
+                                        <input type="text" class="form-control" id="student_roll_no" name="student_roll_no" value="<?php //if(isset($_REQUEST["student_roll_no"])){echo $_REQUEST["student_roll_no"]; } ?>"/>
                                         
-                                    </div>
+                                    </div> -->
                                     
                                       
                                      <div class="col-md-6">
-                                        <label for="student_username"><span class="required_lable">Student Login User Name</span> <span class="red">*</span></label>
+                                        <label for="student_username"><span class="required_lable">Username </span> <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="student_username" name="student_username" value="<?php if(isset($_REQUEST["student_username"])){echo $_REQUEST["student_username"]; } ?>"/>
-                                        <p>Note *: student login user name (Must Have a Unique not Repeated)</p>
+                                        <p>Note *: Username Login (Harus unik dan tidak bisa diganti)</p>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="student_password"><span class="required_lable">Student Login Password</span><span class="red">*</span></label>
+                                        <label for="student_password"><span class="required_lable">Password</span><span class="red">*</span></label>
                                         <input type="password" class="form-control" id="student_password" name="student_password" value="<?php if(isset($_REQUEST["student_password"])){echo $_REQUEST["student_password"]; } ?>"/>
-                                        <p>Note *: student login password </p>
+                                        <p>Note *: login password </p>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="student_birthdate">Student Birthdate <span class="red">*</span></label>
+                                        <label for="student_birthdate">Tanggal Lahir <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="student_birthdate" name="student_birthdate" placeholder="Show Date" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask value="<?php if(isset($_REQUEST["student_birthdate"])){echo $_REQUEST["student_birthdate"]; } ?>">
                                     </div>
                                      <div class="col-md-6">
-                                        <label for="student_standard">Student Standard <span class="red">*</span></label>
+                                        <label for="student_standard">Standar <span class="red">*</span></label>
                                         <select class="form-control select2" name="student_standard" id="student_standard" style="width: 100%;">
                                             <?php foreach($school_standard as $standard){
                                                 ?>
@@ -93,56 +94,78 @@
                                                 <?php
                                             } ?>
                                         </select>
-                                        <p>Note: Standard Not Available in list Please : <a href="<?php echo site_url("standard/manage_standard"); ?>"> Add Standard</a></p>
+                                        <p>Note: Standar tidak tersedia? : <a href="<?php echo site_url("standard/manage_standard"); ?>"> Tambah Standar</a></p>
                                     </div>
                                      <div class="col-md-6">
-                                        <label for="student_address">Student Address <span class="red">*</span></label>
+                                        <label for="student_address">Alamat <span class="red">*</span></label>
                                        <textarea rows="2" id="student_address" name="student_address" class="form-control"><?php if(isset($_REQUEST["student_address"])){echo $_REQUEST["student_address"]; } ?></textarea>
                                     </div>
                                     
                                      <div class="col-md-6">
-                                        <label for="student_city">Student City <span class="red">*</span></label>
+                                        <label for="student_city">Kota <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="student_city" name="student_city" value="<?php if(isset($_REQUEST["student_city"])){echo $_REQUEST["student_city"]; } ?>"/>
                                     </div>
                                      <div class="col-md-6">
-                                        <label for="student_phone">Student Phone  <span class="red">*</span></label>
+                                        <label for="student_phone">Telepon <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="student_phone" name="student_phone" value="<?php if(isset($_REQUEST["student_phone"])){echo $_REQUEST["student_phone"]; } ?>"/>
                                     </div>
                                      <div class="col-md-6">
-                                        <label for="student_parent_phone">Student Parent Phone  </label>
+                                        <label for="student_parent_phone">Telepon Orang Tua  </label>
                                         <input type="text" class="form-control" id="student_parent_phone" name="student_parent_phone" value="<?php if(isset($_REQUEST["student_parent_phone"])){echo $_REQUEST["student_parent_phone"]; } ?>"/>
                                     </div>
-                                     <div class="col-md-6">
+                                    <!-- <div class="col-md-6">
                                         <label for="student_enr_no">Student Enrolment No  </label>
-                                        <input type="text" class="form-control" id="student_enr_no" name="student_enr_no" value="<?php if(isset($_REQUEST["student_enr_no"])){echo $_REQUEST["student_enr_no"]; } ?>"/>
-                                    </div>
+                                        <input type="text" class="form-control" id="student_enr_no" name="student_enr_no" value="<?php // if(isset($_REQUEST["student_enr_no"])){echo $_REQUEST["student_enr_no"]; } ?>"/>
+                                    </div> -->
                                      <div class="col-md-6">
-                                        <label for="student_email">Student Email  </label>
+                                        <label for="student_email">Email </label>
                                         <input type="email" class="form-control" id="student_email" name="student_email" value="<?php if(isset($_REQUEST["student_email"])){echo $_REQUEST["student_email"]; } ?>"/>
                                     </div>
-                                     <div class="col-md-6">
+                                   <!--  <div class="col-md-6">
                                         <label for="student_branch">Student Branch </label>
-                                        <input type="text" class="form-control" id="student_branch" name="student_branch" value="<?php if(isset($_REQUEST["student_branch"])){echo $_REQUEST["student_branch"]; } ?>"/>
-                                    </div>
-                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" id="student_branch" name="student_branch" value="<?php // if(isset($_REQUEST["student_branch"])){echo $_REQUEST["student_branch"]; } ?>"/>
+                                    </div> -->
+                                    <!-- <div class="col-md-6">
                                         <label for="student_semester">Student Semester </label>
-                                        <input type="text" class="form-control" id="student_semester" name="student_semester" value="<?php if(isset($_REQUEST["student_semester"])){echo $_REQUEST["student_semester"]; } ?>"/>
+                                        <input type="text" class="form-control" id="student_semester" name="student_semester" value="<?php //if(isset($_REQUEST["student_semester"])){echo $_REQUEST["student_semester"]; } ?>"/>  
+                                    </div> -->
+                                    <!-- <div class="col-md-6">
+                                        <label for="student_division">Student Division</label>
+                                        <input type="text" class="form-control" id="student_division" name="student_division" value="<?php //if(isset($_REQUEST["student_division"])){echo $_REQUEST["student_division"]; } ?>"/>
+                                    </div> -->
+                                   <!--  <div class="col-md-6">
+                                        <label for="student_batch">Student Batch </label>
+                                        <input type="text" class="form-control" id="student_batch" name="student_batch" value="<?php // if(isset($_REQUEST["student_batch"])){echo $_REQUEST["student_batch"]; } ?>"/>
+                                    </div> -->
+
+                                    <div class="col-md-6">
+                                        <label for="pangkat">Pangkat <span class="red">*</span></label>
+                                        <input type="text" class="form-control" id="pangkat" name="pangkat" value="<?php if(isset($_REQUEST["pangkat"])){echo $_REQUEST["pangkat"]; } ?>"/>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="student_division">Student Division</label>
-                                        <input type="text" class="form-control" id="student_division" name="student_division" value="<?php if(isset($_REQUEST["student_division"])){echo $_REQUEST["student_division"]; } ?>"/>
-                                    </div> 
-                                     <div class="col-md-6">
-                                        <label for="student_batch">Student Batch </label>
-                                        <input type="text" class="form-control" id="student_batch" name="student_batch" value="<?php if(isset($_REQUEST["student_batch"])){echo $_REQUEST["student_batch"]; } ?>"/>
+                                        <label for="korp">Korp <span class="red">*</span></label>
+                                        <input type="text" class="form-control" id="korp" name="korp" value="<?php if(isset($_REQUEST["korp"])){echo $_REQUEST["korp"]; } ?>"/>
                                     </div>
-                                    
-                                    
-                                     <div class="col-md-6">
-                                        <label for="student_photo">Student Photo </label>
+                                    <div class="col-md-6">
+                                        <label for="nrp">NRP <span class="red">*</span></label>
+                                        <input type="text" class="form-control" id="nrp" name="nrp" value="<?php if(isset($_REQUEST["nrp"])){echo $_REQUEST["nrp"]; } ?>"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="kesatuan">Kesatuan <span class="red">*</span></label>
+                                        <input type="text" class="form-control" id="kesatuan" name="kesatuan" value="<?php if(isset($_REQUEST["kesatuan"])){echo $_REQUEST["kesatuan"]; } ?>"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="jabatan">Jabatan <span class="red">*</span></label>
+                                        <input type="text" class="form-control" id="jabatan" name="jabatan" value="<?php if(isset($_REQUEST["jabatan"])){echo $_REQUEST["jabatan"]; } ?>"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="matra">Matra <span class="red">*</span></label>
+                                        <input type="text" class="form-control" id="matra" name="matra" value="<?php if(isset($_REQUEST["matra"])){echo $_REQUEST["matra"]; } ?>"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="student_photo">Foto </label>
                                         <input type="file" class="form-control" id="student_photo" name="student_photo" />
                                     </div>
-                                    
                                     
                                     
                                     
@@ -152,7 +175,7 @@
                               </div><!-- /.box-body -->
             
                               <div class="box-footer">
-                                <button type="submit" name="savestudent" class="btn btn-primary">Save Data</button>
+                                <button type="submit" name="savestudent" class="btn btn-primary">Simpan Data</button>
                               </div>
                             </form>
                         </div>

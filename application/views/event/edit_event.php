@@ -13,12 +13,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Standard
-            <small>Edit Standard</small>
+            Materi Kuliah / Pelatihan
+            <small>Edit</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Standard</a></li>
-            <li class="active">Edit Standard</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Materi Kuliah / Pelatihan </a></li>
+            <li class="active">Edit</li>
           </ol>
         </section>
 
@@ -49,16 +49,16 @@
                                     <div class="row">
                                    
                                       <div class="col-md-12">
-                                        <label for="event_title">Event Title <span class="red">*</span></label>
+                                        <label for="event_title">Judul Mata Kuliah / Pelatihan <span class="red">*</span></label>
                                         <input type="text" class="form-control" id="event_title" name="event_title" placeholder="Ex. Annual Function, Sport Day, Seminar, etc" value="<?php echo $event->event_title; ?>"/>
                                     </div>
                                     <div class="col-md-12">
-                                        <label for="event_description">Event Description <span class="red">*</span></label>
+                                        <label for="event_description">Deskripsi Mata Kuliah / Pelatihan <span class="red">*</span></label>
                                        <textarea rows="5" id="event_description" name="event_description" class="form-control" placeholder="Event Detail"><?php echo $event->event_description; ?></textarea>
                                     </div>
                                     <div class="col-md-12">
                                    <div class="form-group">
-                                  <label for="start_date">Start Date <span class="red">*</span></label>
+                                  <label for="start_date">Tanggal Dimulai <span class="red">*</span></label>
                                     <div class="input-group">
                                       <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
@@ -69,7 +69,7 @@
                                    </div> 
                                     <div class="col-md-12">
                                    <div class="form-group">
-                                  <label for="end_date">End Date <span class="red">*</span></label>
+                                  <label for="end_date">Tanggal Berakhir <span class="red">*</span></label>
                                     <div class="input-group">
                                       <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
@@ -79,17 +79,48 @@
                                 </div>
                                    </div>
                                     <div class="col-md-12">
-                                        <label for="event_photo">Event Photo </label>
+                                        <label for="event_photo">Foto Mata Kuliah / Pelatihan</label>
                                         <input type="file" class="form-control" id="event_photo" name="event_photo" />
                                     </div>
                                      <?php if($event->event_image!=""){ ?>
                                      <div class="col-md-12" >
-                                        <label for="" class="pull-right">Event Photo </label>
+                                        
                                       <?php
                                             $img = $this->config->item('base_url')."uploads/eventphoto/".$event->event_image; ?>                                 
                                             <img src="<?php echo $img; ?>" style="height: 50px; width: 50px; margin-top: 10px;" class="pull-right"/>
+                                       
                                     </div>
                                     <?php } ?>
+                                    <p>
+                                      
+                                    </p>
+
+                                    <div class="col-md-12">
+                                        <label for="file_attachment">File Mata Kuliah / Pelatihan</label>
+                                        <input type="file" class="form-control" id="file_attachment" name="file_attachment" />
+                                    </div>
+                                     <?php if($event->file_attachment!=""){ ?>
+                                     <div class="col-md-12" >
+                                 
+                                      <?php
+                                           $file = $this->config->item('base_url')."uploads/eventphoto/".$event->file_attachment;?>
+                                           <a href="<?php echo $file; ?>" download> Unduh Materi</a>
+                                       
+                                    </div>
+                                    <?php } ?>
+
+                                    <div class="col-md-12">
+                                        <label for="teacher_id">Instruktur<span class="red">*</span></label>
+                                        <select class="form-control select2" name="teacher_id" id="teacher_id" style="width: 100%;">
+                                            <?php foreach($teacher_detail as $teacher){
+                                                ?>
+                                                <option value="<?php echo $teacher->teacher_id; ?>" <?php if($teacher->teacher_id == $teacher->teacher_name){echo "selected";} ?>><?php echo $teacher->teacher_name; ?></option>
+                                                <?php
+                                            } ?>
+                                        </select>
+                                        <p>Daftar Instruktur tidak ada ?  : <a href="<?php echo site_url("teacher/add_teacher"); ?>"> Tambah Instruktur</a></p>
+                                    </div>
+                                   
                                     </div>
                                 </div>
                              
