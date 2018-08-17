@@ -75,18 +75,18 @@ public class AttendenceActivity extends CommonAppCompatActivity {
         note_array = new ArrayList<String>();
 
         month_array = new ArrayList<String>();
-        month_array.add("January");
-        month_array.add("February");
-        month_array.add("March");
+        month_array.add("Januari");
+        month_array.add("Februari");
+        month_array.add("Maret");
         month_array.add("April");
-        month_array.add("May");
-        month_array.add("Jun");
-        month_array.add("July");
-        month_array.add("Augest");
+        month_array.add("Mei");
+        month_array.add("Juni");
+        month_array.add("Juli");
+        month_array.add("Agustus");
         month_array.add("September");
-        month_array.add("October");
+        month_array.add("Oktober");
         month_array.add("November");
-        month_array.add("December");
+        month_array.add("Desember");
 
         year_array = new ArrayList<String>();
 

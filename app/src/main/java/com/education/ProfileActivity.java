@@ -113,8 +113,8 @@ public class ProfileActivity extends CommonAppCompatActivity {
             TextView txtbdate = (TextView)findViewById(R.id.birthdate);
             txtbdate.setText(objStudData.getString("student_birthdate"));
 
-            TextView txtrollno = (TextView)findViewById(R.id.rollno);
-            txtrollno.setText(objStudData.getString("student_roll_no"));
+            //TextView txtrollno = (TextView)findViewById(R.id.rollno);
+            //txtrollno.setText(objStudData.getString("student_roll_no"));
 
             TextView txtstandard = (TextView)findViewById(R.id.standard);
             txtstandard.setText(objStudData.getString("standard_title"));
@@ -128,19 +128,34 @@ public class ProfileActivity extends CommonAppCompatActivity {
             TextView txtparentphone = (TextView)findViewById(R.id.parent_contact);
             txtparentphone.setText(objStudData.getString("student_parent_phone"));
 
-            TextView txtbranch = (TextView)findViewById(R.id.branch);
-            txtbranch.setText(objStudData.getString("student_branch"));
+            //TextView txtbranch = (TextView)findViewById(R.id.branch);
+            //txtbranch.setText(objStudData.getString("student_branch"));
 
-            TextView txtsemester = (TextView)findViewById(R.id.semester);
-            txtsemester.setText(objStudData.getString("student_semester"));
+            //TextView txtbatch = (TextView)findViewById(R.id.batch);
+            //txtbatch.setText(objStudData.getString("student_batch"));
 
-            TextView txtdivision = (TextView)findViewById(R.id.division);
-            txtdivision.setText(objStudData.getString("student_division"));
+            //TextView txtbatch = (TextView)findViewById(R.id.division);
+            //txtdivision.setText(objStudData.getString("student_division"));
 
-            TextView txtbatch = (TextView)findViewById(R.id.batch);
-            txtbatch.setText(objStudData.getString("student_batch"));
+            TextView txtpangkat = (TextView)findViewById(R.id.pangkat);
+            txtpangkat.setText(objStudData.getString("pangkat"));
 
+            TextView txtkorp = (TextView)findViewById(R.id.korp);
+            txtkorp.setText(objStudData.getString("korp"));
 
+            TextView txtnrp = (TextView)findViewById(R.id.nrp);
+            txtnrp.setText(objStudData.getString("nrp"));
+
+            TextView txtkesatuan = (TextView)findViewById(R.id.kesatuan);
+            txtkesatuan.setText(objStudData.getString("kesatuan"));
+
+            TextView txtjabatan = (TextView)findViewById(R.id.jabatan);
+            txtjabatan.setText(objStudData.getString("jabatan"));
+
+            TextView txtmatra = (TextView)findViewById(R.id.matra);
+            txtmatra.setText(objStudData.getString("matra"));
+
+   ;
 
         } catch (JSONException e) {
             e.printStackTrace();

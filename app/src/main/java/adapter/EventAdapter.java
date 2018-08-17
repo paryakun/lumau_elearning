@@ -4,6 +4,8 @@ package adapter;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -122,8 +124,8 @@ public class EventAdapter extends BaseAdapter {
             TextView txtDescription = (TextView)convertView.findViewById(R.id.description);
 
 
-            start_date.setText("From : "+jObj.getString("event_start"));
-            end_date.setText("To : "+jObj.getString("event_end"));
+            start_date.setText("Dari : "+jObj.getString("event_start"));
+            end_date.setText("Hingga : "+jObj.getString("event_end"));
             txtDescription.setText(jObj.getString("event_description"));
             txttitle.setText(jObj.getString("event_title"));
 
@@ -134,6 +136,24 @@ public class EventAdapter extends BaseAdapter {
                 ImageLoader.getInstance().displayImage(ConstValue.BASE_URL + "/uploads/eventphoto/" + jObj.getString("event_image"), top_image, options, animateFirstListener);
                 top_image.setVisibility(View.VISIBLE);
             }
+
+            TextView txtFile = (TextView)convertView.findViewById(R.id.file_attachment);
+
+            if(jObj.getString("file_attachment").equalsIgnoreCase("")){
+                txtFile.setVisibility(View.GONE);
+            }else {
+                txtFile.setClickable(true);
+                txtFile.setMovementMethod(LinkMovementMethod.getInstance());
+                String text = "<a href="+ConstValue.BASE_URL + "/uploads/eventphoto/" + jObj.getString("file_attachment")+"> Download Materi </a>";
+                txtFile.setText(Html.fromHtml(text));
+                //txtFile.setVisibility(View.VISIBLE);
+            }
+
+
+            TextView txtInstruktur = (TextView)convertView.findViewById(R.id.instruktur);
+            txtInstruktur.setText("Instruktur : "+jObj.getString("teacher"));
+
+
         } catch (JSONException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

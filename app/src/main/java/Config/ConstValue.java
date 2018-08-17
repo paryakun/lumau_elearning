@@ -5,7 +5,7 @@ package Config;
  */
 public class ConstValue {
     //public  static String BASE_URL = "http://iclauncher.com/education/";
-    //public  static String BASE_URL = "http://192.168.134.115/lumau_elearning/";
+    //public  static String BASE_URL = "http://192.168.134.98/lumau_elearning/";
     public  static String BASE_URL = "http://192.168.0.4/lumau_elearning/";
     public  static  String LOGIN_URL = BASE_URL+"/index.php/api/login";
     public static String STUDENT_PROFILE_URL = BASE_URL+"/index.php/api/get_student_profile";

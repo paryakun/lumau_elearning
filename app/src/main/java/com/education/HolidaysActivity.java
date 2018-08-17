@@ -73,28 +73,28 @@ public class HolidaysActivity extends CommonAppCompatActivity {
         note_array = new ArrayList<String>();
 
         month_array = new ArrayList<String>();
-        month_array.add("January");
-        month_array.add("February");
-        month_array.add("March");
+        month_array.add("Januari");
+        month_array.add("Februari");
+        month_array.add("Maret");
         month_array.add("April");
-        month_array.add("May");
-        month_array.add("Jun");
-        month_array.add("July");
-        month_array.add("Augest");
+        month_array.add("Mei");
+        month_array.add("Juni");
+        month_array.add("Juli");
+        month_array.add("Agustus");
         month_array.add("September");
-        month_array.add("October");
+        month_array.add("Oktober");
         month_array.add("November");
-        month_array.add("December");
+        month_array.add("Desember");
 
         year_array = new ArrayList<String>();
         day_array = new ArrayList<String>();
-        day_array.add("Sun");
-        day_array.add("Mon");
-        day_array.add("Tue");
-        day_array.add("Wed");
-        day_array.add("Thu");
-        day_array.add("Fri");
-        day_array.add("Sat");
+        day_array.add("Minggu");
+        day_array.add("Senin");
+        day_array.add("Selasa");
+        day_array.add("Rabu");
+        day_array.add("Kamis");
+        day_array.add("Jumat");
+        day_array.add("Sabtu");
 
         Calendar c = Calendar.getInstance();
         int year = c.get(Calendar.YEAR);
@@ -208,7 +208,7 @@ public class HolidaysActivity extends CommonAppCompatActivity {
             try {
                 Date a_date = format.parse(String.valueOf(current_year)+"-"+String.valueOf(current_month)+"-"+String.valueOf(position + 1));
                 day.setText(day_array.get(a_date.getDay()));
-                if (day_array.get(a_date.getDay()).equalsIgnoreCase("Sun")){
+                if (day_array.get(a_date.getDay()).equalsIgnoreCase("Minggu")){
                     convertView.setBackgroundColor(getResources().getColor(R.color.color_3));
 
                 }
