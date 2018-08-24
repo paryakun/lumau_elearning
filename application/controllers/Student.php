@@ -46,76 +46,63 @@ class Student extends CI_Controller {
                                   <strong>Warning!</strong> '.$this->form_validation->error_string().'
                                 </div>';
                     
-        		}else
-                {
-                    
-                     // $q = $this->db->query("select * from student_detail where student_standard=".$this->input->post('student_standard')." AND student_roll_no='".$this->input->post('student_roll_no')."'"); 
-                      $q = $this->db->query("select * from student_detail where student_standard=".$this->input->post('student_standard'));
-                      $duplicate_check =  $q->row();
-                      if(isset($duplicate_check)){
-                        $this->session->set_flashdata("message", '<div class="alert alert-danger alert-dismissible" role="alert">
-                                          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                          <strong>Warning!</strong> Student Roll No Already Exist With Selected Standard.Please Enter Another Roll No.
-                                        </div>');
-                      }
-                      else{
-                        
-                        $file_name="";
-                        $config['upload_path'] = './uploads/studentphoto/';
-                		$config['allowed_types'] = 'gif|jpg|png|jpeg';
-                       $this->load->library('upload', $config);
+        		}else{  
                             
-                 if($_FILES["student_photo"]["size"] > 0)
-                		if ( ! $this->upload->do_upload('student_photo'))
-                		{
-                			$error = array('error' => $this->upload->display_errors());
-                
-                			$this->load->view('upload_form', $error);
-                		}
-                		else
-                		{
-                			$file_data = $this->upload->data();
-                            $file_name = $file_data["file_name"];
-                            
-                		//	$student_profile["student_photo"] = $file_name;
-                		}               
+
+
+                            $file_name="";
+                            $config['upload_path'] = './uploads/studentphoto/';
+                    		$config['allowed_types'] = 'gif|jpg|png|jpeg';
+                            $this->load->library('upload', $config);
+                                
+                            if($_FILES["student_photo"]["size"] > 0)
+                        		if ( ! $this->upload->do_upload('student_photo'))
+                        		{
+                        			$error = array('error' => $this->upload->display_errors());
                         
-                            $this->load->model("common_model");
-                            $this->common_model->data_insert("student_detail",
-                             array(
-                            "student_name"=>$this->input->post("student_name"),
-                            "student_birthdate"=>$this->input->post("student_birthdate"),
-                            "student_unique_no"=>$this->input->post("student_unique_no"),
-                           // "student_roll_no"=>$this->input->post("student_roll_no"),
-                            "student_user_name"=>$this->input->post("student_username"),
-                            "student_password"=>md5($this->input->post("student_password")),
-                            "student_orgpassword"=>$this->input->post("student_password"),
-                            "student_standard"=>$this->input->post("student_standard"),
-                            "student_address"=>$this->input->post("student_address"),
-                            "student_city"=>$this->input->post("student_city"),
-                            "student_phone"=>$this->input->post("student_phone"),
-                            "student_parent_phone"=>$this->input->post("student_parent_phone"),
-                            //"student_enr_no"=>$this->input->post("student_enr_no"),
-                            "student_email"=>$this->input->post("student_email"),
-                            //"student_branch"=>$this->input->post("student_branch"),
-                            //"student_semester"=>$this->input->post("student_semester"),
-                            //"student_division"=>$this->input->post("student_division"),
-                            //"student_batch"=>$this->input->post("student_batch"),
-                            "pangkat"=>$this->input->post("pangkat"),
-                            "korp"=>$this->input->post("korp"),
-                            "nrp"=>$this->input->post("nrp"),
-                            "kesatuan"=>$this->input->post("kesatuan"),
-                            "jabatan"=>$this->input->post("jabatan"),
-                            "matra"=>$this->input->post("matra"),
-                            "student_photo"=>$file_name,
-                            "school_id"=>_get_current_user_id($this)
-                            ));
-                            $this->session->set_flashdata("message", '<div class="alert alert-success alert-dismissible" role="alert">
-                                  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                  <strong>Success!</strong> Student Data Added Successfully
-                                </div>');
-                                redirect("student/add_student");
-                    }    
+                        			$this->load->view('upload_form', $error);
+                        		}
+                    		      else
+                        		{
+                        			$file_data = $this->upload->data();
+                                    $file_name = $file_data["file_name"];
+                                    
+                        		//	$student_profile["student_photo"] = $file_name;
+                        		}               
+ 
+                                $this->load->model("common_model");
+                                $this->common_model->data_insert("student_detail",
+                                 array(
+                                "student_name"=>$this->input->post("student_name"),
+                                "student_birthdate"=>$this->input->post("student_birthdate"),
+                                "student_unique_no"=>$this->input->post("student_unique_no"),
+                               
+                                "student_user_name"=>$this->input->post("student_username"),
+                                "student_password"=>md5($this->input->post("student_password")),
+                                "student_orgpassword"=>$this->input->post("student_password"),
+                                "student_standard"=>$this->input->post("student_standard"),
+                                "student_address"=>$this->input->post("student_address"),
+                                "student_city"=>$this->input->post("student_city"),
+                                "student_phone"=>$this->input->post("student_phone"),
+                                "student_parent_phone"=>$this->input->post("student_parent_phone"),
+ 
+                                "student_email"=>$this->input->post("student_email"),
+
+                                "pangkat"=>$this->input->post("pangkat"),
+                                "korp"=>$this->input->post("korp"),
+                                "nrp"=>$this->input->post("nrp"),
+                                "kesatuan"=>$this->input->post("kesatuan"),
+                                "jabatan"=>$this->input->post("jabatan"),
+                                "matra"=>$this->input->post("matra"),
+                                "student_photo"=>$file_name,
+                                "school_id"=>_get_current_user_id($this)
+                                ));
+                                $this->session->set_flashdata("message", '<div class="alert alert-success alert-dismissible" role="alert">
+                                      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                      <strong>Success!</strong> Sukses Menambahkan Data
+                                    </div>');
+                                    redirect("student/add_student");
+                          
                 }
             }
             
