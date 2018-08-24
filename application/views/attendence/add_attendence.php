@@ -190,7 +190,7 @@
                               <div class="box-body">
                                <div class="col-md-3">
                      <div class="form-group">
-                                  <label for="attendencedate">Attendence Date <span class="red">*</span></label>
+                                  <label for="attendencedate">Tanggal Kehadiran <span class="red">*</span></label>
                                     <div class="input-group">
                                       <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
@@ -206,12 +206,12 @@
                     <thead>
                       <tr>
                       <th>ID</th>
-                        <th>Standard Name</th>
-                        <th>Student Name</th>
-                         <th>Student Roll No</th>
-                        <th style="color: white; background: green;">Present</th>
-                        <th style="color: white; background: red;">Absent</th>
-                        <th>Attendence Note</th>
+                        <th>Standar</th>
+                        <th>Nama Siswa</th>
+                     <!--     <th>Student Roll No</th> -->
+                        <th style="color: white; background: green;">Hadir</th>
+                        <th style="color: white; background: red;">Absen</th>
+                        <th>Catatan Kehadiran</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -233,10 +233,10 @@
                         <input type="hidden" name="student_id[]" value="<?php echo $students->student_id; ?>"/>
                         <?php echo $students->standard_title; ?></td>
                        <td><?php echo $students->student_name; ?></td>
-                       <td><?php echo $students->student_roll_no; ?></td>
-                        <td style="color: green;"><input type="radio" name="attendence<?php echo $students->student_id ?>" value="1"  <?php if(isset($array['attended']) && $array['attended']=="1") {echo "checked";} ?>/>Presend</td>
-                        <td style="color: red;"><input type="radio" name="attendence<?php echo $students->student_id ?>" value="0" <?php if(isset($array['attended']) && $array['attended']=="0") {echo "checked";} ?>/>Absent</td> 
-                        <td><input type="text" name="note<?php echo $students->student_id ?>" placeholder="Student Abesent Note Here" value="<?php if(isset($array['attendence_reason'])) echo $array['attendence_reason']; ?>"/></td>
+                      <!--  <td><?php // echo $students->student_roll_no; ?></td> -->
+                        <td style="color: green;"><input type="radio" name="attendence<?php echo $students->student_id ?>" value="1"  <?php if(isset($array['attended']) && $array['attended']=="1") {echo "checked";} ?>/>Hadir</td>
+                        <td style="color: red;"><input type="radio" name="attendence<?php echo $students->student_id ?>" value="0" <?php if(isset($array['attended']) && $array['attended']=="0") {echo "checked";} ?>/>Absen</td> 
+                        <td><input type="text" name="note<?php echo $students->student_id ?>" placeholder="Catatan Kehadiran" value="<?php if(isset($array['attendence_reason'])) echo $array['attendence_reason']; ?>"/></td>
                              
                     </tr>
                                     
@@ -252,7 +252,7 @@
                               </div><!-- /.box-body -->
             
                              <div class="box-footer">
-                                <button type="submit" name="saveattendence" class="btn btn-primary">Save Data</button>
+                                <button type="submit" name="saveattendence" class="btn btn-primary">Simpan Data</button>
                               </div>
                             </form>
                         </div>

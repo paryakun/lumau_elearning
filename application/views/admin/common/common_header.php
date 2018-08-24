@@ -27,10 +27,10 @@
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="<?php echo site_url("users/change_password") ?>" class="btn btn-default btn-flat"><i class="fa fa-key"></i>Change Password</a>
+                      <a href="<?php echo site_url("users/change_password") ?>" class="btn btn-default btn-flat"><i class="fa fa-key"></i>Ubah Password</a>
                     </div> 
                     <div class="pull-right">
-                      <a href="<?php echo site_url("admin/signout") ?>" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Sign out</a>
+                      <a href="<?php echo site_url("admin/signout") ?>" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Keluar</a>
                     </div>
                   </li>
                 </ul>
