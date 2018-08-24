@@ -39,36 +39,36 @@ class Student extends CI_Controller {
                 $this->form_validation->set_rules('matra', 'Matra', 'trim|required');
                
                 if ($this->form_validation->run() == FALSE) 
-        		{
-        		  
-        			$data["error"] = '<div class="alert alert-warning alert-dismissible" role="alert">
+                {
+                  
+                    $data["error"] = '<div class="alert alert-warning alert-dismissible" role="alert">
                                   <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                   <strong>Warning!</strong> '.$this->form_validation->error_string().'
                                 </div>';
                     
-        		}else{  
+                }else{  
                             
 
 
                             $file_name="";
                             $config['upload_path'] = './uploads/studentphoto/';
-                    		$config['allowed_types'] = 'gif|jpg|png|jpeg';
+                            $config['allowed_types'] = 'gif|jpg|png|jpeg';
                             $this->load->library('upload', $config);
                                 
                             if($_FILES["student_photo"]["size"] > 0)
-                        		if ( ! $this->upload->do_upload('student_photo'))
-                        		{
-                        			$error = array('error' => $this->upload->display_errors());
+                                if ( ! $this->upload->do_upload('student_photo'))
+                                {
+                                    $error = array('error' => $this->upload->display_errors());
                         
-                        			$this->load->view('upload_form', $error);
-                        		}
-                    		      else
-                        		{
-                        			$file_data = $this->upload->data();
+                                    $this->load->view('upload_form', $error);
+                                }
+                                  else
+                                {
+                                    $file_data = $this->upload->data();
                                     $file_name = $file_data["file_name"];
                                     
-                        		//	$student_profile["student_photo"] = $file_name;
-                        		}               
+                                //  $student_profile["student_photo"] = $file_name;
+                                }               
  
                                 $this->load->model("common_model");
                                 $this->common_model->data_insert("student_detail",
@@ -131,17 +131,17 @@ class Student extends CI_Controller {
                 $this->form_validation->set_rules('matra', 'Matra', 'trim|required');
               
                 if ($this->form_validation->run() == FALSE) 
-        		{
-        		  
-        			$data["error"] = '<div class="alert alert-warning alert-dismissible" role="alert">
+                {
+                  
+                    $data["error"] = '<div class="alert alert-warning alert-dismissible" role="alert">
                                   <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                   <strong>Warning!</strong> '.$this->form_validation->error_string().'
                                 </div>';
                     
-        		} else{
-        		  
+                } else{
                   
-            		       
+                  
+                           
                              
                          
                         $update_array = array(
@@ -173,21 +173,21 @@ class Student extends CI_Controller {
                                 
                      if($_FILES["student_photo"]["size"] > 0){
                          $config['upload_path'] = './uploads/studentphoto/';
-                    		$config['allowed_types'] = 'gif|jpg|png|jpeg';
+                            $config['allowed_types'] = 'gif|jpg|png|jpeg';
                            $this->load->library('upload', $config);
-                    		if ( ! $this->upload->do_upload('student_photo'))
-                    		{
-                    			$error = array('error' => $this->upload->display_errors());
+                            if ( ! $this->upload->do_upload('student_photo'))
+                            {
+                                $error = array('error' => $this->upload->display_errors());
                     
-                    			$this->load->view('upload_form', $error);
-                    		}
-                    		else
-                    		{
-                    			$file_data = $this->upload->data();
+                                $this->load->view('upload_form', $error);
+                            }
+                            else
+                            {
+                                $file_data = $this->upload->data();
                                 $file_name = $file_data["file_name"];
                                 $update_array["student_photo"] = $file_name;
-                    		//	$student_profile["student_photo"] = $file_name;
-                    		}  
+                            //  $student_profile["student_photo"] = $file_name;
+                            }  
                            } 
                             $this->load->model("common_model");
                             $this->common_model->data_update("student_detail",$update_array,array("student_id"=>$student_id)
@@ -210,9 +210,9 @@ class Student extends CI_Controller {
         }
     }
     
- 	public function list_student()
-	{
-		if(_is_user_login($this)){
+    public function list_student()
+    {
+        if(_is_user_login($this)){
            // $data = array();
             
           $filter = array();   
@@ -229,9 +229,9 @@ class Student extends CI_Controller {
             $this->load->view("student/list_student",$data);
         }
     }
-    	public function student_excel_download()
-	{
-		if(_is_user_login($this)){
+        public function student_excel_download()
+    {
+        if(_is_user_login($this)){
  
         
         // print_r($company);   
@@ -242,7 +242,7 @@ ini_set('display_startup_errors', TRUE);
 date_default_timezone_set('Europe/London');
  $this->load->library('PHPExcel');
 if (PHP_SAPI == 'cli')
-	die('This example should only be run from a Web Browser');
+    die('This example should only be run from a Web Browser');
 
 
 // Create new PHPExcel object
@@ -250,12 +250,12 @@ $objPHPExcel = new PHPExcel();
 
 // Set document properties
 $objPHPExcel->getProperties()->setCreator("Fedenaa")
-							 ->setLastModifiedBy("Fedenaa")
-							 ->setTitle("Office 2007 XLSX Test Document")
-							 ->setSubject("Office 2007 XLSX Test Document")
-							 ->setDescription("School Student List")
-							 ->setKeywords("office 2007 openxml php")
-							 ->setCategory("Fedenaa");
+                             ->setLastModifiedBy("Fedenaa")
+                             ->setTitle("Office 2007 XLSX Test Document")
+                             ->setSubject("Office 2007 XLSX Test Document")
+                             ->setDescription("School Student List")
+                             ->setKeywords("office 2007 openxml php")
+                             ->setCategory("Fedenaa");
 
 //$objPHPExcel->setActiveSheetIndex(0)->mergeCells('A1:G1');
   
