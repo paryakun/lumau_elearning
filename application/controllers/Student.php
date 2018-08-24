@@ -49,7 +49,8 @@ class Student extends CI_Controller {
         		}else
                 {
                     
-                      $q = $this->db->query("select * from student_detail where student_standard=".$this->input->post('student_standard')." AND student_roll_no='".$this->input->post('student_roll_no')."'");
+                     // $q = $this->db->query("select * from student_detail where student_standard=".$this->input->post('student_standard')." AND student_roll_no='".$this->input->post('student_roll_no')."'"); 
+                      $q = $this->db->query("select * from student_detail where student_standard=".$this->input->post('student_standard'));
                       $duplicate_check =  $q->row();
                       if(isset($duplicate_check)){
                         $this->session->set_flashdata("message", '<div class="alert alert-danger alert-dismissible" role="alert">
